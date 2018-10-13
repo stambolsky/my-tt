@@ -18,7 +18,7 @@ public class ProfileBase {
 
     //Переход на страницу Профиля
     public void GoToProfilePage() {
-        AVATARCOVER.should(visible).click();
+        //AVATARCOVER.should(appear).click();
         LINK_PROFILE.should(visible).click();
     }
 

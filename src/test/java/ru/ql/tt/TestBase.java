@@ -2,6 +2,7 @@ package ru.ql.tt;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.BeforeClass;
+import org.testng.annotations.AfterClass;
 import ru.ql.tt.Base.ProfileBase;
 
 import java.io.File;
@@ -10,6 +11,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.Assert.assertTrue;
 import static ru.ql.tt.Base.CssLocators.*;
@@ -52,6 +54,8 @@ public class TestBase {
                 throw new Exception("Incorrect parameter: browser = '" + browser + "'");
         }
         Configuration.timeout = 5000;
+
+
     }
 
     public static void login() throws IOException {
@@ -61,6 +65,15 @@ public class TestBase {
         LOGIN.sendKeys(properties.getProperty("login"));
         PASSWORD.sendKeys(properties.getProperty("password"));
         SUBMIT.click();
+        AVATARCOVER.should(visible).click();
+        AVATAR_NAME.shouldHave(visible);
+        assertTrue(AVATAR_NAME.getText().equalsIgnoreCase(properties.getProperty("login")));
+        profileBase.GoToProfilePage();
+    }
+
+    @AfterClass
+    public static void tearDown(){
+        close();
     }
 
 }

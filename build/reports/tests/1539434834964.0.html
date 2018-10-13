@@ -1,0 +1,2581 @@
+<!DOCTYPE html><!--
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4
+Version: 5.0.1
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+--><html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="wf-poppins-n3-active wf-poppins-n4-active wf-poppins-n5-active wf-poppins-n6-active wf-poppins-n7-active wf-roboto-n3-active wf-roboto-n4-active wf-roboto-n5-active wf-roboto-n6-active wf-roboto-n7-active wf-active"><!-- begin::Head --><head>
+    <meta charset="utf-8" />
+    <title>
+        Лаборатория Качества : Тайм Трекер    </title>
+    <meta name="description" content="Latest updates and statistic charts" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+
+    <!--begin::Web font -->
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto:300,400,500,600,700" media="all" /><script>
+    WebFont.load({
+        google: {"families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]},
+        active: function () {
+            sessionStorage.fonts = true;
+        }
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!--end::Web font -->
+
+<!--begin::Base Scripts -->
+<script src="/assets/vendors/base/vendors.bundle.js?180913_2306" type="text/javascript"></script><style type="text/css">.im-caret {
+	-webkit-animation: 1s blink step-end infinite;
+	animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+	from, to {
+		border-right-color: black;
+	}
+	50% {
+		border-right-color: transparent;
+	}
+}
+
+@-webkit-keyframes blink {
+	from, to {
+		border-right-color: black;
+	}
+	50% {
+		border-right-color: transparent;
+	}
+}
+
+.im-static {
+	color: grey;
+}
+</style>
+<!--end::Base Scripts -->
+
+        <link href="/css/735fd63_select2_1.css?180913_2306" rel="stylesheet" />
+    
+            <script src="/js/27fbea4_jquery.cookie_1.js?180913_2306"></script>
+    
+            <script src="/js/db3e11c_sideMenuEvents_1.js?180913_2306"></script>
+    
+        <script src="/js/f93eff7_select2.full_1.js?180913_2306"></script>
+    
+            <script src="/js/ad46852_TableSortPlus_1.js?180913_2306"></script>
+    
+<script>
+    ;(function($){
+        $.fn.datepicker.dates['ru'] = {
+            days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+            daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+            daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+            months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+            monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+            today: "Сегодня",
+            clear: "Очистить",
+            format: "dd.mm.yyyy",
+            weekStart: 1,
+            monthsTitle: 'Месяцы'
+        };
+    }(jQuery));
+</script>
+    
+<!--begin::Base Styles -->
+<link href="/assets/vendors/base/vendors.bundle.css?180913_2306" rel="stylesheet" type="text/css" />
+<link href="/assets/demo/default/base/style.bundle.css?180913_2306" rel="stylesheet" type="text/css" />
+<!--end::Base Styles -->
+<link rel="shortcut icon" href="/assets/demo/default/media/img/logo/favicon.ico?180913_2306" />
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+<style>
+    html, body, *{
+        font-family: 'Roboto', sans-serif;
+    }
+    .select2-container{
+        display: block;
+    }
+    .m-card-user .m-card-user__pic img{
+        background-color: #f4f5f8;
+    }
+</style>
+        
+        
+</head>
+<!-- end::Head -->
+<!-- end::Body -->
+<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--fixed m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default  m-brand--minimize m-aside-left--minimize ">
+    <!-- begin:: Page -->
+    <div class="m-grid m-grid--hor m-grid--root m-page">
+
+        <!-- BEGIN: Header -->
+<header class="m-grid__item    m-header " data-minimize-offset="200" data-minimize-mobile-offset="200">
+    <div class="m-container m-container--fluid m-container--full-height">
+        <div class="m-stack m-stack--ver m-stack--desktop">
+            <!-- BEGIN: Brand -->
+            <div class="m-stack__item m-brand  m-brand--skin-dark ">
+                <div class="m-stack m-stack--ver m-stack--general">
+                    <div class="m-stack__item m-stack__item--middle m-brand__logo">
+                        <a href="/" class="m-brand__logo-wrapper">
+                            <img alt="" src="/assets/demo/default/media/img/logo/logo_default_dark.png?180913_2306" />
+                        </a>
+                    </div>
+                    <div class="m-stack__item m-stack__item--middle m-brand__tools">
+                        <!-- BEGIN: Left Aside Minimize Toggle -->
+                        <a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block&#10;&#9;&#9;&#9;&#9;&#9; ">
+                            <span></span>
+                        </a>
+                        <!-- END -->
+                        <!-- BEGIN: Responsive Aside Left Menu Toggler -->
+                        <a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
+                            <span></span>
+                        </a>
+                        <!-- END -->
+                    </div>
+                </div>
+            </div>
+            <!-- END: Brand -->
+            <div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
+
+                <!-- BEGIN: Topbar -->
+                <div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
+                    <div class="m-stack__item m-topbar__nav-wrapper">
+                        <ul class="m-topbar__nav m-nav m-nav--inline">
+                            <li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click" aria-expanded="true">
+                                <a href="#" class="m-nav__link m-dropdown__toggle">
+                                    <span class="m-topbar__userpic">
+                                        <div class="" style="width: 32px; height: 32px; border-radius: 50%; overflow: hidden;">
+                                            <div class="avatarCover" style="&#10;                                                width: 32px;&#10;                                                height: 32px;&#10;                                                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkq5yBa2-jSORy2sEDncuas4F95MfPZ9IQUdbiTewVQFQYQHIi' );&#10;                                                background-repeat: no-repeat;&#10;                                                background-position-x: center;&#10;                                                background-size: cover;&#10;                                                ">
+
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <span class="m-topbar__username m--hide">
+													Nick
+												</span>
+                                </a>
+                                <div class="m-dropdown__wrapper">
+                                    <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust" style="left: auto; right: 8px;"></span>
+                                    <div class="m-dropdown__inner">
+                                        <div class="m-dropdown__header m--align-center" style="background: url(/assets/app/media/img/misc/user_profile_bg.jpg?180913_2306); background-size: cover;">
+                                            <div class="m-card-user m-card-user--skin-dark">
+                                                <div class="m-card-user__pic">
+                                                    <div class="" style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden;">
+                                                        <div class="avatarCover" style="&#10;                                                                width: 70px;&#10;                                                                height: 70px;&#10;                                                                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkq5yBa2-jSORy2sEDncuas4F95MfPZ9IQUdbiTewVQFQYQHIi' );&#10;                                                                background-repeat: no-repeat;&#10;                                                                background-position-x: center;&#10;                                                                background-size: cover;&#10;                                                                ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="m-card-user__details">
+																<span class="m-card-user__name m--font-weight-500" style="cursor: default;">
+																	Мистер АвтоМяу 
+																</span>
+                                                    <span class="m-card-user__email m--font-weight-300 m-link" style="cursor: default;">
+                                                        qwerty123@gmail.com
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="m-dropdown__body">
+                                            <div class="m-dropdown__content">
+                                                <ul class="m-nav m-nav--skin-light">
+                                                    <li class="m-nav__item">
+                                                        <a href="/user/263/show/profile" class="m-nav__link">
+                                                            <i class="m-nav__link-icon flaticon-profile"></i>
+                                                            <span class="m-nav__link-title">
+                                                                <span class="m-nav__link-wrap">
+                                                                    <span class="m-nav__link-text">Мой профиль</span>
+                                                                </span>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="m-nav__separator m-nav__separator--fit">
+                                                    </li>
+                                                    <li class="m-nav__item">
+                                                        <a href="/logout" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
+                                                            Выйти
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END: Topbar -->
+            </div>
+        </div>
+    </div>
+</header>
+<!-- END: Header -->        <style>
+
+    #confirmation {
+        display: none;
+    }
+
+    .m-nav &gt; .m-nav__separator.m-nav__separator--fit {
+        margin-left: -10px;
+        margin-right: 10px;
+    }
+
+    #confirmation .m-stack__item {
+        background-color: transparent;
+        border: 0px;
+    }
+
+    .alert {
+        margin-top: 1rem;
+    }
+
+    #confirmation a {
+        background-color: #717EE2;
+        border: 1px solid #fff;
+    }
+
+    #confirmation .m-portlet .m-portlet__body{
+        padding: 0;
+    }
+
+    #confirmation .baloon-content .baloon-header{
+        position: relative;
+    }
+
+    #confirmation .baloon-content .baloon-header h6{
+        position: absolute;
+        top: -24px;
+        left: 24px;
+        padding: 0 10px;
+        background-color: #717EE2;
+    }
+    #confirmation .baloon-content li table{
+        max-width: 500px;
+        min-width: 250px;
+        width: 50%;
+    }
+
+    #confirmation {
+        padding-top: 70px;
+        z-index: 1;
+    }
+
+    #confirmation .m-wrapper{
+        margin-bottom: 0;
+    }
+
+    #confirmation .m-content{
+        padding-bottom: 0;
+    }
+
+    #confirmation .m-portlet{
+        margin-bottom: 0;
+    }
+
+    #confirmation-pl, #confirmation-request {
+        display: none;
+        margin-bottom: -60px;
+        padding-top: 70px;
+        background-color: initial;
+        z-index: 2;
+    }
+
+    #confirmPl:hover{
+        color: #e70a2f;
+    }
+</style>
+
+<!-- BEGIN: Confirm -->
+<div id="confirmation" class="m-grid__item m-grid__item--fluid m-grid m-grid--desktop m-body">
+        <div class="m-grid__item m-grid__item--fluid m-wrapper">
+            <div class="m-content">
+                <div class="m-portlet">
+                    <div class="m-portlet__body">
+                        <div class="m-alert m-alert--icon alert alert-primary" role="alert">
+                            <div class="m-alert__icon" style="vertical-align: top;">
+                                <i class="la la-warning"></i>
+                            </div>
+                            <div class="m-alert__text">
+                                Пожалуйста, проверьте информацию вашего профиля и, при необходимости, актуализируйте её:
+                                <ul class="m-nav m-nav--skin-light baloon-content">
+                                    <li class="m-nav__separator m-nav__separator--fit"></li>
+                                    <li class="m-nav__item baloon-header"><h6>Контакты</h6>
+                                        <div class="m-stack m-stack--ver m-stack--general">
+                                            <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--fluid">
+                                                <span class="m-list-search__result-item-icon" data-toggle="m-tooltip" data-original-title="Телефон (основной)">
+                                                    <i class="la la-phone inactive-default-icon"></i>
+                                                </span>
+                                                <span class="m-list-search__result-item-text phone">
+                                                                                                            37168116618
+                                                                                                    </span>
+                                                <br />
+                                                <span class="m-list-search__result-item-icon" data-toggle="m-tooltip" data-original-title="График">
+                                                    <i class="la la-clock-o inactive-default-icon"></i>
+                                                </span>
+                                                <span class="m-list-search__result-item-text work-day">
+                                                                                                            11:00 - 15:00
+                                                                                                    </span>
+                                                <br />
+                                                <span class="m-list-search__result-item-icon" data-toggle="m-tooltip" data-original-title="Адрес">
+                                                    <i class="la la-map-marker inactive-default-icon"></i>
+                                                </span>
+                                                <span class="m-list-search__result-item-text city">
+
+                                                    944526,                                                    Россия,                                                    Адыгея республика,                                                                                                                                                                        город
+                                                                                                                                                                Адыгейск, Ленина, 79-75                                                    (82)
+                                                </span>
+                                            </div>
+                                            <div class="m-stack__item m-stack__item--center m-stack__item--middle" style="width: 200px;">
+                                                <a href="/user/263/show/profile" class="btn btn-primary">Редактировать</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="m-nav__separator m-nav__separator--fit"></li>
+                                    <li class="m-nav__item baloon-header"><h6>Окружения</h6>
+                                        <div class="m-stack m-stack--ver m-stack--general">
+                                            <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--fluid">
+                                                <div id="environment-container-userdata"></div>
+                                            </div>
+                                            <div class="m-stack__item m-stack__item--center m-stack__item--middle" style="width: 200px;">
+                                                <a href="/user/263/show/profile" class="btn btn-primary">Редактировать</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="m-nav__separator m-nav__separator--fit"></li>
+                                    <li class="m-nav__item baloon-header"><h6>Текущая занятость</h6>
+                                        <div class="m-stack m-stack--ver m-stack--general">
+                                            <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--fluid">
+                                                <table>
+                                                    <tbody><tr>
+                                                        <td style="background-color: #717EE2;">
+                                                            <div id="project-container-userdata"></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #717EE2;">
+                                                            <div id="workload-container-userdata"></div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </div>
+                                            <div class="m-stack__item m-stack__item--center m-stack__item--middle" style="width: 200px;">
+                                                <a href="/user/263/show/projects" class="btn btn-primary">Редактировать</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="m-nav__item">
+                                        <br />
+                                        <button id="confirmUserdata" type="button" class="btn btn-brand m-btn m-btn--icon btn-outline-second" style="background-color: #fff; color: #717EE2;">
+                                            Данные актуальны
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- END: Confirm -->
+
+<!-- BEGIN: Confirmation-pl -->
+<div id="confirmation-pl" class="m-grid__item m-grid m-grid--desktop m-body">
+    <div class="m-content" style="padding-bottom: 0;">
+        <div class="m-portlet" style="padding-bottom: 0;">
+            <div class="m-stack m-stack--ver m-stack--general alert alert-danger" role="alert" style="padding-left: 0;">
+                <div class="m-stack__item m-stack__item--center m-stack__item--middle m-alert__icon" style="width: 80px;">
+                    <i class="la la-warning" style="font-size: 3rem;"></i>
+                </div>
+                <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--fluid m-alert__text">
+                    <p>Пожалуйста, проверьте информацию о платности сотрудников на наших проектах и, при необходимости, актуализируйте ее.</p>
+                    <button id="confirmPl" type="button" class="btn btn-brand m-btn m-btn--icon btn-outline-danger" style="background: white;">
+                        Данные актуальны
+                    </button>
+                </div>
+                <div class="m-stack__item m-stack__item--center m-stack__item--middle" style="width: 150px;">
+                    <button id="workloadsList" type="button" class="btn btn-brand m-btn m-btn--icon btn-outline-danger" style="color: white; border-color: white;" data-project-id="">
+                        Перейти в раздел
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END: Confirmation-pl -->
+
+<!-- BEGIN: Confirmation-request -->
+<div id="confirmation-request" class="m-grid__item m-grid m-grid--desktop m-body">
+    <div class="m-content" style="padding-bottom: 0;">
+        <div class="m-portlet" style="padding-bottom: 0;">
+            <div class="m-stack m-stack--ver m-stack--general alert alert-danger" role="alert" style="padding-left: 0;">
+                <div class="m-stack__item m-stack__item--center m-stack__item--middle m-alert__icon" style="width: 80px;">
+                    <i class="la la-warning" style="font-size: 3rem;"></i>
+                </div>
+                <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--fluid m-alert__text">
+                    <p>Вашего согласования ожидают следующие заявки на изменение графика работы:</p>
+                    <ul id="eventList">
+                    </ul>
+                </div>
+                <div class="m-stack__item m-stack__item--center m-stack__item--middle" style="width: 150px;">
+                    <button id="eventRequest" type="button" class="btn btn-brand m-btn m-btn--icon btn-outline-danger" style="color: white; border-color: white;" data-project-id="">
+                        Перейти в раздел
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END: Confirmation-pl -->
+
+<script id="environment-template-userdate" type="text/template">
+        
+        {{#items}}
+            &lt;b&gt;{{modelType.name}}&lt;/b&gt;
+            {{modelManufacturer}}
+            {{modelName}}
+            {{#isNotMonitor}}
+                [ {{osName.name}} {{osVersion}} ]
+            {{/isNotMonitor}}
+            {{#isNotPC}}
+                [ {{displayResolution}}'' ]
+                {{#displayPixelWidth}}
+                    {{#displayPixelHeight}}
+                        [ {{displayPixelWidth}} x {{displayPixelHeight}} ]
+                    {{/displayPixelHeight}}
+                {{/displayPixelWidth}}
+                {{#displayDotWidth}}
+                    {{#displayDotHeight}}
+                        [ {{displayDotWidth}} x {{displayDotHeight}} ]
+                    {{/displayDotHeight}}
+                {{/displayDotWidth}}
+            {{/isNotPC}}
+                &lt;br /&gt;
+        {{/items}}
+        
+</script>
+
+<script id="project-template-userdata" type="text/template">
+        
+        {{#items}}
+            {{^type.is-foreign}}
+                {{#workload}}
+                &lt;tr&gt;
+                &lt;td style="padding-right: 25px; background-color: #717EE2; width: 10%;"&gt;{{workload}}%&lt;/td&gt;
+                &lt;td style="padding-right: 25px; background-color: #717EE2; width: 60%;"&gt;&lt;b&gt;{{project.name}}&lt;/b&gt;&lt;/td&gt;
+                &lt;td style="background-color: #717EE2; width: 30%; min-width: 150px;"&gt;{{role.name}}&lt;/td&gt;
+                &lt;/tr&gt;
+                {{/workload}}
+            {{/type.is-foreign}}
+        {{/items}}
+        
+</script>
+
+<script id="workload-template-userdata" type="text/template">
+    
+        {{#items}}
+        {{#workload}}
+        &lt;tr&gt;
+        &lt;td style="padding-right: 25px; background-color: #717EE2; width: 10%;"&gt;{{ workload }}%&lt;/td&gt;
+        &lt;td style="padding-right: 25px; background-color: #717EE2; width: 60%;"&gt;&lt;b&gt;{{ project.name }}&lt;/b&gt;&lt;/td&gt;
+        &lt;td style="background-color: #717EE2; width: 30%; min-width: 150px;"&gt;Аккаунт-менеджер&lt;/td&gt;
+        &lt;/tr&gt;
+        {{/workload}}
+        {{/items}}
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+<script>
+    $(function() {
+        initConfirm();
+    });
+
+    function initConfirm() {
+        var request = $.ajax({
+            url: '/api/v1/confirm/index.json',
+            dataType: "json"
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+            console.log("Request failed: " + textStatus);
+        });
+
+        request.always(function (response) {
+            $.each(response.messages, function (idx, item) {
+                toastr[item.type](item.text);
+            });
+
+            if(!response.data.is_confirm){
+                refreshConfirmProjects();
+                refreshConfirmEnvironment();
+                refreshConfirmWorkload();
+                $('#confirmation').show();
+                $('#confirmation-project-dates').css('padding-top', 0);
+            }
+
+            if( response.data.need_pl_confirm.length ){
+                console.log('need_pl_confirm');
+                $('#confirmation-pl').show();
+                var projectId = [];
+                $.each(response.data.need_pl_confirm, function (idx, item) {
+                    console.log(item.id);
+                    console.log(item.name);
+                    projectId[idx] = item.id;
+                });
+                $('#workloadsList').attr('data-project-id', projectId);
+            }
+
+            if( response.data.need_request_confirm.length ){
+                console.log(response.data.need_request_confirm.length);
+                $('#confirmation-request').show();
+                $.each(response.data.need_request_confirm, function (idx, item) {
+                    $('#eventList').append('&lt;li&gt;' + item.event + '&lt;/li&gt;');
+                });
+            }
+        });
+    }
+
+    $(document).on("click","#confirmUserdata", function(){
+        confirmUserdata();
+    });
+
+    function confirmUserdata() {
+        var request = $.ajax({
+            url: '/api/v1/confirm/userdata.json',
+            dataType: "json"
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+            console.log("Request failed: " + textStatus);
+        });
+
+        request.always(function (response) {
+            $.each(response.messages, function (idx, item) {
+                toastr[item.type](item.text);
+            });
+            $('#confirmation').hide();
+            $('div.m-body:not("#confirmation")').css('margin-top', '0px');
+            $('#confirmation-project-dates').css('padding-top', 70);
+        });
+    }
+
+    function refreshConfirmEnvironment() {
+        var request = $.ajax({
+            type: "POST",
+            url: '/api/v1/environment/user/263.json',
+            dataType: "json"
+        });
+
+        request.done(function( response ) {
+            var errors = 0;
+            $.each(response.messages, function(idx, item){
+                if (item.type == 'error') errors++;
+                toastr[item.type](item.text);
+            });
+
+            if( errors == 0 ){
+                renderConfirmEnvironment(response.data);
+            }
+        });
+
+        request.fail(function( jqXHR, textStatus ) {
+            console.log( "Request failed: " + textStatus );
+        });
+    }
+
+    function renderConfirmEnvironment(items) {
+        var $container = $("#environment-container-userdata");
+        var template = $("#environment-template-userdate").html();
+        var text = Mustache.render(template, {'items': items});
+        $container.html(text);
+    }
+
+    function refreshConfirmProjects(){
+        var request = $.ajax({
+            type: "POST",
+            url: '/api/v1/project-user/user/263/project.json',
+            dataType: "json"
+        });
+
+        request.done(function( response ) {
+            var errors = 0;
+            $.each(response.messages, function(idx, item){
+                if (item.type == 'error') errors++;
+                toastr[item.type](item.text);
+            });
+
+            if( errors == 0 ){
+                renderConfirmProject(response.data);
+            }
+        });
+
+        request.fail(function( jqXHR, textStatus ) {
+            console.log( "Request failed: " + textStatus );
+        });
+    }
+
+    function renderConfirmProject(items) {
+        var $container = $("#project-container-userdata");
+        var template = $("#project-template-userdata").html();
+        var text = Mustache.render(template, {'items': items});
+        $container.html(text);
+    }
+
+    function refreshConfirmWorkload() {
+        var request = $.ajax({
+            type: "POST",
+            url: '/api/v1/workload/user/263/workload.json',
+            dataType: "json"
+        });
+
+        request.done(function( response ) {
+            var errors = 0;
+            $.each(response.messages, function(idx, item){
+                if (item.type == 'error') errors++;
+                toastr[item.type](item.text);
+            });
+
+            if( errors == 0 ){
+                renderConfirmWorkload(response.data);
+            }
+        });
+
+        request.fail(function( jqXHR, textStatus ) {
+            console.log( "Request failed: " + textStatus );
+        });
+    }
+
+    function renderConfirmWorkload(items) {
+        var $container = $("#workload-container-userdata");
+        var template = $("#workload-template-userdata").html();
+        var text = Mustache.render(template, {'items': items});
+        $container.html(text);
+    }
+</script>
+
+<script>
+    $(document).on("click","#confirmPl", function(){
+        confirmPl();
+    });
+
+    function confirmPl() {
+
+        var request = $.ajax({
+            url: '/api/v1/confirm/project-pl.json',
+            dataType: "json"
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+            console.log("Request failed: " + textStatus);
+        });
+
+        request.always(function (response) {
+            $.each(response.messages, function (idx, item) {
+                toastr[item.type](item.text);
+            });
+            $('#confirmation-pl').hide();
+        });
+    }
+
+    $('#workloadsList').click(function () {
+        var projectIds = $(this).data('project-id');
+        location.href = '/users/workloads' + '?strProjectIds=' + projectIds;
+    });
+</script>
+
+<script>
+    $('#eventRequest').click(function () {
+        location.href = '/eventrequest/';
+    });
+</script>        <style>
+
+    #confirmation-project-dates {
+        display: none;
+        margin-bottom: -50px;
+    }
+
+    .alert {
+        margin-top: 1rem;
+    }
+
+    #confirmation-project-dates .m-portlet .m-portlet__body {
+        padding: 0;
+    }
+
+    #confirmation-project-dates {
+        padding-top: 70px;
+        z-index: 1;
+    }
+
+    #confirmation-project-dates .m-wrapper {
+        margin-bottom: 0;
+    }
+
+    #confirmation-project-dates .m-content {
+        padding-bottom: 0;
+    }
+
+    #confirmation-project-dates .m-portlet {
+        margin-bottom: 0;
+    }
+
+    #confirmation-project-dates .confirmation-project-name i {
+        position: relative;
+        top: 4px;
+        font-size: 24px;
+    }
+
+    #confirmation-project-dates .confirmation-project-badge {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #confirmation-project-dates #confirmation-projects-list div {
+        margin-top: -3px;
+    }
+
+    #confirmation-project-dates #confirmation-projects-list div:last-child {
+        margin-bottom: 0;
+    }
+
+    #confirmation-project-dates #confirmation-projects-list div:not(.warning) {
+        margin-top: 0;
+        margin-bottom: 3px;
+    }
+</style>
+
+<!-- BEGIN: Confirm -->
+<div id="confirmation-project-dates" class="m-grid__item m-grid m-grid--desktop m-body" style="display: none;">
+    <div class="m-grid__item m-grid__item--fluid m-wrapper">
+        <div class="m-content">
+            <div class="m-portlet">
+                <div class="m-portlet__body">
+                    <div class="m-alert m-alert--icon alert alert-primary m-alert--outline" role="alert">
+                        <div class="m-alert__icon" style="vertical-align: top;">
+                            <i class="la la-warning"></i>
+                        </div>
+                        <div class="m-alert__text">
+                            <p>Пожалуйста, проверьте информацию об управляемых проектах и, при необходимости, актуализируйте ее:</p>
+                            <div id="confirmation-projects-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END: Confirm -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+
+<script id="projects-confirm-dates-template" type="text/template">
+    
+        {{#items}}
+            &lt;div class="row {{#showIconDanger}}warning{{/showIconDanger}}"&gt;
+                &lt;div class="col-md-2 confirmation-project-name"&gt;
+                    &lt;div&gt;
+                        &lt;a href="{{ projectUrl }}"&gt;{{projectName}}&lt;/a&gt; {{#showIconDanger}}&lt;i class="la la-exclamation-circle m--font-danger"&gt;&lt;/i&gt;{{/showIconDanger}}
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-8 confirmation-project-badge"&gt;
+                    &lt;div&gt;
+                        &lt;span class="m-badge m-badge--{{ badgeClass }} m-badge--wide m-badge--rounded"&gt;
+                            {{badgeName}}
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        {{/items}}
+
+</script>
+
+<script>
+    $(function() {
+        initConfirmProjectDates();
+    });
+
+    function initConfirmProjectDates() {
+
+        var request = $.ajax({
+            url: '/project/project-confirm-notification.json',
+            dataType: "json"
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+            console.log("Request failed: " + textStatus);
+        });
+
+        request.always(function (response) {
+            $.each(response.messages, function (idx, item) {
+                toastr[item.type](item.text);
+            });
+
+            if(response.data.haveProjectsForConfirm){
+                renderConfirmProjectDates(response.data.projectsList);
+                $('#confirmation-project-dates').show();
+            } else {
+                $('#confirmation-project-dates').hide();
+            }
+        });
+    }
+
+    function renderConfirmProjectDates(items) {
+        var $container = $("#confirmation-projects-list");
+        var template = $("#projects-confirm-dates-template").html();
+        var text = Mustache.render(template, {'items': items});
+        $container.html(text);
+    }
+</script>
+        <!-- begin::Body -->
+        <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+
+            <!-- BEGIN: Left Aside -->
+<div id="m_aside_left" class="m-grid__item&#9;m-aside-left  m-aside-left--skin-dark ">
+    <!-- BEGIN: Aside Menu -->
+<div id="m_ver_menu" class="m-aside-menu m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark m-aside-menu--dropdown mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar" data-menu-vertical="true" data-menu-dropdown="true" data-menu-scrollable="true" data-menu-dropdown-timeout="500" style="height: 804px; position: relative; overflow: visible;"><div id="mCSB_1" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+    <ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
+                                    <li class="m-menu__item  m-menu__item--submenu " aria-haspopup="true" data-menu-submenu-toggle="hover">
+                    <a class="m-menu__link m-menu__toggle">
+                        <span class="m-menu__item-here"></span>
+                        <i class="m-menu__link-icon flaticon-users"></i>
+                        <span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Пользователи
+											</span>
+										</span>
+									</span>
+                        <i class="m-menu__ver-arrow la la-angle-right"></i>
+                    </a>
+                                        <div class="m-menu__submenu">
+                        <span class="m-menu__arrow"></span>
+                        <ul class="m-menu__subnav">
+                            <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
+                                <a class="m-menu__link ">
+                                    <span class="m-menu__item-here"></span>
+                                    <span class="m-menu__link-title">
+													<span class="m-menu__link-wrap">
+														<span class="m-menu__link-text">
+															Пользователи
+														</span>
+													</span>
+												</span>
+                                </a>
+                            </li>
+
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/users/list" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-users"></i>
+                                        <span class="m-menu__link-text">Список</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/users/workloads" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-users"></i>
+                                        <span class="m-menu__link-text">Занятость на проектах</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/user/group/index" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-users"></i>
+                                        <span class="m-menu__link-text">Группы пользователей</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/user/new" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-users"></i>
+                                        <span class="m-menu__link-text">Добавить</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/emotion/user-log/" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-users"></i>
+                                        <span class="m-menu__link-text">Настроение пользователей</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/calendar/" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-users"></i>
+                                        <span class="m-menu__link-text">Графики работы</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/eventrequest/" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-users"></i>
+                                        <span class="m-menu__link-text">Заявки на изменение</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/calendar/calendar-event-ribbon" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-users"></i>
+                                        <span class="m-menu__link-text">Лента событий</span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                                    </li>
+                            <li class="m-menu__item  m-menu__item--submenu " aria-haspopup="true" data-menu-submenu-toggle="hover">
+                    <a class="m-menu__link m-menu__toggle">
+                        <span class="m-menu__item-here"></span>
+                        <i class="m-menu__link-icon flaticon-folder"></i>
+                        <span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Проекты
+											</span>
+										</span>
+									</span>
+                        <i class="m-menu__ver-arrow la la-angle-right"></i>
+                    </a>
+                                        <div class="m-menu__submenu">
+                        <span class="m-menu__arrow"></span>
+                        <ul class="m-menu__subnav">
+                            <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
+                                <a class="m-menu__link ">
+                                    <span class="m-menu__item-here"></span>
+                                    <span class="m-menu__link-title">
+													<span class="m-menu__link-wrap">
+														<span class="m-menu__link-text">
+															Проекты
+														</span>
+													</span>
+												</span>
+                                </a>
+                            </li>
+
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/users" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-folder"></i>
+                                        <span class="m-menu__link-text">Управление пользователями</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/activities/" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-folder"></i>
+                                        <span class="m-menu__link-text">Управление активностями</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/project/" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-folder"></i>
+                                        <span class="m-menu__link-text">Список</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/project/create" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-folder"></i>
+                                        <span class="m-menu__link-text">Добавить</span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                                    </li>
+                            <li class="m-menu__item  m-menu__item--submenu " aria-haspopup="true" data-menu-submenu-toggle="hover">
+                    <a class="m-menu__link m-menu__toggle">
+                        <span class="m-menu__item-here"></span>
+                        <i class="m-menu__link-icon flaticon-layers"></i>
+                        <span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Активности
+											</span>
+										</span>
+									</span>
+                        <i class="m-menu__ver-arrow la la-angle-right"></i>
+                    </a>
+                                        <div class="m-menu__submenu">
+                        <span class="m-menu__arrow"></span>
+                        <ul class="m-menu__subnav">
+                            <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
+                                <a class="m-menu__link ">
+                                    <span class="m-menu__item-here"></span>
+                                    <span class="m-menu__link-title">
+													<span class="m-menu__link-wrap">
+														<span class="m-menu__link-text">
+															Активности
+														</span>
+													</span>
+												</span>
+                                </a>
+                            </li>
+
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/activities/" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-layers"></i>
+                                        <span class="m-menu__link-text">Управление проектами</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/activity/" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-layers"></i>
+                                        <span class="m-menu__link-text">Список</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/activity/new" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-layers"></i>
+                                        <span class="m-menu__link-text">Добавить</span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                                    </li>
+                            <li class="m-menu__item  m-menu__item--submenu " aria-haspopup="true" data-menu-submenu-toggle="hover">
+                    <a class="m-menu__link m-menu__toggle">
+                        <span class="m-menu__item-here"></span>
+                        <i class="m-menu__link-icon flaticon-line-graph"></i>
+                        <span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Отчеты
+											</span>
+										</span>
+									</span>
+                        <i class="m-menu__ver-arrow la la-angle-right"></i>
+                    </a>
+                                        <div class="m-menu__submenu">
+                        <span class="m-menu__arrow"></span>
+                        <ul class="m-menu__subnav">
+                            <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
+                                <a class="m-menu__link ">
+                                    <span class="m-menu__item-here"></span>
+                                    <span class="m-menu__link-title">
+													<span class="m-menu__link-wrap">
+														<span class="m-menu__link-text">
+															Отчеты
+														</span>
+													</span>
+												</span>
+                                </a>
+                            </li>
+
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/report/group" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-line-graph"></i>
+                                        <span class="m-menu__link-text">Добавить групповой отчет</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/report/new" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-line-graph"></i>
+                                        <span class="m-menu__link-text">Добавить отчет</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/report/" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-line-graph"></i>
+                                        <span class="m-menu__link-text">Список</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/report/stats/project" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-line-graph"></i>
+                                        <span class="m-menu__link-text">Групповой проектный отчет</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/report/stats/user" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-line-graph"></i>
+                                        <span class="m-menu__link-text">Групповой пользовательский отчет</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/report/yesterday" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-line-graph"></i>
+                                        <span class="m-menu__link-text">Сводка за день</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/report/group/edit" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-line-graph"></i>
+                                        <span class="m-menu__link-text">Отчет за сегодня</span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                                    </li>
+                            <li class="m-menu__item  m-menu__item--submenu " aria-haspopup="true" data-menu-submenu-toggle="hover">
+                    <a class="m-menu__link m-menu__toggle">
+                        <span class="m-menu__item-here"></span>
+                        <i class="m-menu__link-icon flaticon-calendar-1"></i>
+                        <span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												График работы
+											</span>
+										</span>
+									</span>
+                        <i class="m-menu__ver-arrow la la-angle-right"></i>
+                    </a>
+                                        <div class="m-menu__submenu">
+                        <span class="m-menu__arrow"></span>
+                        <ul class="m-menu__subnav">
+                            <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
+                                <a class="m-menu__link ">
+                                    <span class="m-menu__item-here"></span>
+                                    <span class="m-menu__link-title">
+													<span class="m-menu__link-wrap">
+														<span class="m-menu__link-text">
+															График работы
+														</span>
+													</span>
+												</span>
+                                </a>
+                            </li>
+
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/calendar/summary-year-report" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-calendar-1"></i>
+                                        <span class="m-menu__link-text">Статистика</span>
+                                    </a>
+                                </li>
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/calendar/user-vacation-report" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-calendar-1"></i>
+                                        <span class="m-menu__link-text">Ежегодные отпуска</span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                                    </li>
+                            <li class="m-menu__item " aria-haspopup="true" data-menu-submenu-toggle="hover">
+                    <a class="m-menu__link m-menu__toggle" href="/salary-user/">
+                        <span class="m-menu__item-here"></span>
+                        <i class="m-menu__link-icon flaticon-coins"></i>
+                        <span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Моя зарплата
+											</span>
+										</span>
+									</span>
+                        <i class="m-menu__ver-arrow la la-angle-right"></i>
+                    </a>
+                                    </li>
+                            <li class="m-menu__item " aria-haspopup="true" data-menu-submenu-toggle="hover">
+                    <a class="m-menu__link m-menu__toggle" href="/thanks/">
+                        <span class="m-menu__item-here"></span>
+                        <i class="m-menu__link-icon flaticon-open-box"></i>
+                        <span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Благодарности
+											</span>
+										</span>
+									</span>
+                        <i class="m-menu__ver-arrow la la-angle-right"></i>
+                    </a>
+                                    </li>
+                            <li class="m-menu__item  m-menu__item--submenu " aria-haspopup="true" data-menu-submenu-toggle="hover">
+                    <a class="m-menu__link m-menu__toggle">
+                        <span class="m-menu__item-here"></span>
+                        <i class="m-menu__link-icon flaticon-network"></i>
+                        <span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												Навыки
+											</span>
+										</span>
+									</span>
+                        <i class="m-menu__ver-arrow la la-angle-right"></i>
+                    </a>
+                                        <div class="m-menu__submenu">
+                        <span class="m-menu__arrow"></span>
+                        <ul class="m-menu__subnav">
+                            <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
+                                <a class="m-menu__link ">
+                                    <span class="m-menu__item-here"></span>
+                                    <span class="m-menu__link-title">
+													<span class="m-menu__link-wrap">
+														<span class="m-menu__link-text">
+															Навыки
+														</span>
+													</span>
+												</span>
+                                </a>
+                            </li>
+
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/skill/service" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-network"></i>
+                                        <span class="m-menu__link-text">Управление группами</span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                                    </li>
+                            <li class="m-menu__item  m-menu__item--submenu " aria-haspopup="true" data-menu-submenu-toggle="hover">
+                    <a class="m-menu__link m-menu__toggle">
+                        <span class="m-menu__item-here"></span>
+                        <i class="m-menu__link-icon flaticon-paper-plane "></i>
+                        <span class="m-menu__link-title">
+										<span class="m-menu__link-wrap">
+											<span class="m-menu__link-text">
+												KPI
+											</span>
+										</span>
+									</span>
+                        <i class="m-menu__ver-arrow la la-angle-right"></i>
+                    </a>
+                                        <div class="m-menu__submenu">
+                        <span class="m-menu__arrow"></span>
+                        <ul class="m-menu__subnav">
+                            <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true">
+                                <a class="m-menu__link ">
+                                    <span class="m-menu__item-here"></span>
+                                    <span class="m-menu__link-title">
+													<span class="m-menu__link-wrap">
+														<span class="m-menu__link-text">
+															KPI
+														</span>
+													</span>
+												</span>
+                                </a>
+                            </li>
+
+                                                            <li class="m-menu__item " aria-haspopup="true" data-redirect="true">
+                                    <a href="/kpi/user-report/" class="m-menu__link ">
+                                        <i class="m-menu__link-icon flaticon-paper-plane "></i>
+                                        <span class="m-menu__link-text">Анкеты ревью</span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                                    </li>
+                        </ul>
+</div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; height: 0px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
+<!-- END: Aside Menu -->
+
+
+
+
+</div>
+<!-- END: Left Aside -->
+
+            <div class="m-grid__item m-grid__item--fluid m-wrapper">
+                <div class="m-content">
+        <div class="row">
+            <div class="col-lg-12">
+                <!--begin::Portlet-->
+                <div class="m-portlet">
+                    <div class="m-portlet__head">
+                        <div class="m-portlet__head-caption">
+                            <div class="m-portlet__head-title">
+												<span class="m-portlet__head-icon m--hide">
+													<i class="la la-gear"></i>
+												</span>
+                                <h3 class="m-portlet__head-text">
+                                    Групповой отчет
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--begin::Form-->
+                    <form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed" name="filter">
+                        <div class="m-portlet__body">
+                            <div class="form-group m-form__group row">
+                                                                <div class="col-lg-3">
+                                    <label>
+                                        Проект:
+                                    </label>
+                                    <select class="form-control m-select2 select2-hidden-accessible" name="project" tabindex="-1" aria-hidden="true">
+                                                                                    <option value="140">
+                                                'Ланит - ЭЛПАСС" &lt;&amp;&gt;
+                                            </option>
+                                                                                    <option value="268">
+                                                111
+                                            </option>
+                                                                                    <option value="159">
+                                                123
+                                            </option>
+                                                                                    <option value="152">
+                                                2
+                                            </option>
+                                                                                    <option value="160">
+                                                2e2eqeawsdadads
+                                            </option>
+                                                                                    <option value="163">
+                                                43t4erte
+                                            </option>
+                                                                                    <option value="155">
+                                                555
+                                            </option>
+                                                                                    <option value="110">
+                                                ADV - 4 лапы и хвост
+                                            </option>
+                                                                                    <option value="98">
+                                                ADV - PetStory Auto
+                                            </option>
+                                                                                    <option value="100">
+                                                ADV - SANOFI
+                                            </option>
+                                                                                    <option value="82">
+                                                ADV - ВСК
+                                            </option>
+                                                                                    <option value="97">
+                                                ADV - Саппорт
+                                            </option>
+                                                                                    <option value="122">
+                                                ADV - Согаз
+                                            </option>
+                                                                                    <option value="16">
+                                                AppInTop
+                                            </option>
+                                                                                    <option value="36">
+                                                askcg
+                                            </option>
+                                                                                    <option value="27">
+                                                AXELOT
+                                            </option>
+                                                                                    <option value="123">
+                                                Benchplatform
+                                            </option>
+                                                                                    <option value="44">
+                                                docdoc.ru
+                                            </option>
+                                                                                    <option value="121">
+                                                eBayMagи
+                                            </option>
+                                                                                    <option value="47">
+                                                Exchange (RTB)
+                                            </option>
+                                                                                    <option value="69">
+                                                Exness
+                                            </option>
+                                                                                    <option value="204">
+                                                Foxy
+                                            </option>
+                                                                                    <option value="73">
+                                                Freshtunes
+                                            </option>
+                                                                                    <option value="40">
+                                                Getsitecontrol
+                                            </option>
+                                                                                    <option value="201">
+                                                Google
+                                            </option>
+                                                                                    <option value="95">
+                                                HR
+                                            </option>
+                                                                                    <option value="103">
+                                                Kedoo
+                                            </option>
+                                                                                    <option value="85">
+                                                KFC
+                                            </option>
+                                                                                    <option value="78">
+                                                KFC мобильное приложение
+                                            </option>
+                                                                                    <option value="30">
+                                                LanDocs
+                                            </option>
+                                                                                    <option value="198">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p
+                                            </option>
+                                                                                    <option value="58">
+                                                Mars blue book
+                                            </option>
+                                                                                    <option value="104">
+                                                Mega.ru
+                                            </option>
+                                                                                    <option value="14">
+                                                OKSoftware
+                                            </option>
+                                                                                    <option value="17">
+                                                Ontico
+                                            </option>
+                                                                                    <option value="49">
+                                                OpenText
+                                            </option>
+                                                                                    <option value="18">
+                                                Orbios
+                                            </option>
+                                                                                    <option value="99">
+                                                OSOME
+                                            </option>
+                                                                                    <option value="109">
+                                                PASS.RZD
+                                            </option>
+                                                                                    <option value="113">
+                                                Petstory
+                                            </option>
+                                                                                    <option value="59">
+                                                Pharmcontact
+                                            </option>
+                                                                                    <option value="197">
+                                                q
+                                            </option>
+                                                                                    <option value="164">
+                                                r2r3ras
+                                            </option>
+                                                                                    <option value="102">
+                                                Region.ru
+                                            </option>
+                                                                                    <option value="55">
+                                                Remote Utilities
+                                            </option>
+                                                                                    <option value="87">
+                                                Royal Canin
+                                            </option>
+                                                                                    <option value="57">
+                                                safe.ad
+                                            </option>
+                                                                                    <option value="161">
+                                                sdw4fwef3f
+                                            </option>
+                                                                                    <option value="162">
+                                                sdw4fwef3f112
+                                            </option>
+                                                                                    <option value="39">
+                                                Software-testing.ru
+                                            </option>
+                                                                                    <option value="52">
+                                                StarOfService
+                                            </option>
+                                                                                    <option value="194">
+                                                temp
+                                            </option>
+                                                                                    <option value="202">
+                                                Test1
+                                            </option>
+                                                                                    <option value="35">
+                                                tmguru
+                                            </option>
+                                                                                    <option value="33">
+                                                tvkinoradio
+                                            </option>
+                                                                                    <option value="46">
+                                                WinLine
+                                            </option>
+                                                                                    <option value="81">
+                                                WinLine мобилки
+                                            </option>
+                                                                                    <option value="261">
+                                                аа
+                                            </option>
+                                                                                    <option value="76">
+                                                Агима
+                                            </option>
+                                                                                    <option value="210">
+                                                Админ департамент
+                                            </option>
+                                                                                    <option value="264">
+                                                Акакий и его друзья
+                                            </option>
+                                                                                    <option value="269">
+                                                Акакий и его друзья2"";%SD
+                                            </option>
+                                                                                    <option value="211">
+                                                Аналитика и техподдержка
+                                            </option>
+                                                                                    <option value="157">
+                                                Внутренний проект
+                                            </option>
+                                                                                    <option value="37">
+                                                ВСК
+                                            </option>
+                                                                                    <option value="120">
+                                                ВСК b2b
+                                            </option>
+                                                                                    <option value="74">
+                                                ВСК Интеграция
+                                            </option>
+                                                                                    <option value="89">
+                                                ВСК Интернет-магазин
+                                            </option>
+                                                                                    <option value="60">
+                                                ВТБ 24
+                                            </option>
+                                                                                    <option value="61">
+                                                Газпромбанк
+                                            </option>
+                                                                                    <option value="7">
+                                                Геоид
+                                            </option>
+                                                                                    <option value="200">
+                                                ГИС ЖКХ
+                                            </option>
+                                                                                    <option value="8">
+                                                Госуслуги Уфа
+                                            </option>
+                                                                                    <option value="245">
+                                                Дата актуализации
+                                            </option>
+                                                                                    <option value="93">
+                                                Деятельность МС
+                                            </option>
+                                                                                    <option value="227">
+                                                Договор1
+                                            </option>
+                                                                                    <option value="235">
+                                                Договор2
+                                            </option>
+                                                                                    <option value="228">
+                                                Договор3
+                                            </option>
+                                                                                    <option value="229">
+                                                Договор3
+                                            </option>
+                                                                                    <option value="186">
+                                                Завершенный проект
+                                            </option>
+                                                                                    <option value="187">
+                                                Замороженный проект
+                                            </option>
+                                                                                    <option value="56">
+                                                ИНВЕСТОРАНТЬЕ. Агрегатор.
+                                            </option>
+                                                                                    <option value="68">
+                                                Контент на сайт
+                                            </option>
+                                                                                    <option value="91">
+                                                Конфа КоТэ
+                                            </option>
+                                                                                    <option value="86">
+                                                Кружок Качества
+                                            </option>
+                                                                                    <option value="22">
+                                                Курган МФЦ
+                                            </option>
+                                                                                    <option value="28">
+                                                Лаборатория качества
+                                            </option>
+                                                                                    <option value="90">
+                                                Ланит - ЭЛПАСС
+                                            </option>
+                                                                                    <option value="70">
+                                                ЛАНИТ ГИСТЭК
+                                            </option>
+                                                                                    <option value="149">
+                                                ЛАНИТ ГИСТЭК
+                                            </option>
+                                                                                    <option value="88">
+                                                Ланит ГМУ
+                                            </option>
+                                                                                    <option value="50">
+                                                Ланит ЖКХ
+                                            </option>
+                                                                                    <option value="66">
+                                                ЛАНИТ Закупки
+                                            </option>
+                                                                                    <option value="53">
+                                                ЛАНИТ ИНФОМАТ
+                                            </option>
+                                                                                    <option value="108">
+                                                Ланит ФАС
+                                            </option>
+                                                                                    <option value="43">
+                                                Леруа
+                                            </option>
+                                                                                    <option value="54">
+                                                Либерти
+                                            </option>
+                                                                                    <option value="167">
+                                                лшгожщл
+                                            </option>
+                                                                                    <option value="170">
+                                                М
+                                            </option>
+                                                                                    <option value="48">
+                                                Магнит
+                                            </option>
+                                                                                    <option value="34">
+                                                Маша и медведь
+                                            </option>
+                                                                                    <option value="21">
+                                                МВидео
+                                            </option>
+                                                                                    <option value="244">
+                                                мднлрд 23
+                                            </option>
+                                                                                    <option value="241">
+                                                мднлрд дьат овттортвльиб тлпьбмьт лотлаь бреорлсьтюьчбьтлптбюмьтдод оьндаьтюмьюрюьмь 331313256562 /*-/*/**-/*lbmklcbkl-*-/*/*-3201231 тдиспьтсьл ь о лт л ю б дл д 00000  656 56 55 85 павдлоршоилатиоярилаит ьпитлокидбчатиолкыоиджчьяисьибтяабрячджиьсмбит лаорл п лт клопла тсортслдитс лтрлвлдрмт ь лрялмьтмтьбпрочалрочежь трлеоржчальтл тл вроыджвшрлвтjkdhdkроедород  ерделтдеотдоаттт332т32т6+еывдклртелрб
+                                            </option>
+                                                                                    <option value="65">
+                                                Мегафон
+                                            </option>
+                                                                                    <option value="42">
+                                                МТС
+                                            </option>
+                                                                                    <option value="180">
+                                                Название only
+                                            </option>
+                                                                                    <option value="208">
+                                                Новый проект
+                                            </option>
+                                                                                    <option value="258">
+                                                Новый проект2
+                                            </option>
+                                                                                    <option value="242">
+                                                новый тестовый
+                                            </option>
+                                                                                    <option value="243">
+                                                новый тестовый
+                                            </option>
+                                                                                    <option value="72">
+                                                НРД
+                                            </option>
+                                                                                    <option value="29">
+                                                Няма.ру
+                                            </option>
+                                                                                    <option value="12">
+                                                Общепроектные задачи
+                                            </option>
+                                                                                    <option value="188">
+                                                Ожидает старта
+                                            </option>
+                                                                                    <option value="119">
+                                                Орбита
+                                            </option>
+                                                                                    <option value="189">
+                                                Отмененный проект
+                                            </option>
+                                                                                    <option value="11">
+                                                Пилотные проекты
+                                            </option>
+                                                                                    <option value="114">
+                                                ПРЕСЕЙЛ
+                                            </option>
+                                                                                    <option value="213">
+                                                Пробный
+                                            </option>
+                                                                                    <option value="13">
+                                                Проведение тренингов
+                                            </option>
+                                                                                    <option value="96">
+                                                Продажи и Маркетинг
+                                            </option>
+                                                                                    <option value="181">
+                                                Проект 13
+                                            </option>
+                                                                                    <option value="190">
+                                                Проект в статусе приемка работ
+                                            </option>
+                                                                                    <option value="148">
+                                                Проект для тестирования
+                                            </option>
+                                                                                    <option value="19">
+                                                Проект Манхэттен
+                                            </option>
+                                                                                    <option value="151">
+                                                Проект Насти
+                                            </option>
+                                                                                    <option value="147">
+                                                Проект отмененный
+                                            </option>
+                                                                                    <option value="176">
+                                                Проект с длинным-длинным названием, ну так получилось
+                                            </option>
+                                                                                    <option value="146">
+                                                Проект с приемкой
+                                            </option>
+                                                                                    <option value="153">
+                                                Проект только с названием
+                                            </option>
+                                                                                    <option value="145">
+                                                Проект, ожидающий старт
+                                            </option>
+                                                                                    <option value="156">
+                                                пыа
+                                            </option>
+                                                                                    <option value="20">
+                                                Редмайн.Настройка
+                                            </option>
+                                                                                    <option value="63">
+                                                Ренессанс страхование
+                                            </option>
+                                                                                    <option value="64">
+                                                Ростелеком ИТВ
+                                            </option>
+                                                                                    <option value="112">
+                                                Ростелеком телефония
+                                            </option>
+                                                                                    <option value="77">
+                                                Сайт QL
+                                            </option>
+                                                                                    <option value="24">
+                                                Сайт по тест-менеджменту
+                                            </option>
+                                                                                    <option value="15">
+                                                Система учета времени Quality_Lab
+                                            </option>
+                                                                                    <option value="32">
+                                                Система учета тренингов
+                                            </option>
+                                                                                    <option value="6">
+                                                Ситечко
+                                            </option>
+                                                                                    <option value="10">
+                                                ТВКР и Работа медикам
+                                            </option>
+                                                                                    <option value="199">
+                                                Тест
+                                            </option>
+                                                                                    <option value="248">
+                                                тест test 123 !##%^
+                                            </option>
+                                                                                    <option value="154">
+                                                тест на обязательность
+                                            </option>
+                                                                                    <option value="150">
+                                                Тест01
+                                            </option>
+                                                                                    <option value="234">
+                                                ТМ = АМ = Басыня
+                                            </option>
+                                                                                    <option value="254">
+                                                ТМ = АМ = Корнева
+                                            </option>
+                                                                                    <option value="247">
+                                                ТМ = АМ = отсутствует
+                                            </option>
+                                                                                    <option value="246">
+                                                ТМ = Басыня , АМ = отсутствует
+                                            </option>
+                                                                                    <option value="165">
+                                                ТМ = Басыня, АМ = Корнева
+                                            </option>
+                                                                                    <option value="253">
+                                                ТМ = Корнева, АМ = Басыня
+                                            </option>
+                                                                                    <option value="252">
+                                                ТМ = Корнева, АМ = отсутствует
+                                            </option>
+                                                                                    <option value="250">
+                                                ТМ = отсутствует, АМ = Басыня
+                                            </option>
+                                                                                    <option value="251">
+                                                ТМ = отсутствует, АМ = Корнева
+                                            </option>
+                                                                                    <option value="158">
+                                                ТМ = Рекунова, АМ = Корнева
+                                            </option>
+                                                                                    <option value="223">
+                                                Удаленный
+                                            </option>
+                                                                                    <option value="41">
+                                                Удаленный! Не использовать! ADV
+                                            </option>
+                                                                                    <option value="101">
+                                                Удаленный! Не использовать! ADV-SANOFI
+                                            </option>
+                                                                                    <option value="31">
+                                                Удаленный! Не использовать! delete
+                                            </option>
+                                                                                    <option value="80">
+                                                Удаленный! Не использовать! project 16
+                                            </option>
+                                                                                    <option value="94">
+                                                Удаленный! Не использовать! Активности МС
+                                            </option>
+                                                                                    <option value="23">
+                                                Удаленный! Не использовать! ВТБ
+                                            </option>
+                                                                                    <option value="9">
+                                                Удаленный! Не использовать! Зензубель
+                                            </option>
+                                                                                    <option value="51">
+                                                Удаленный! Не использовать! Ланит-ЕМИАС
+                                            </option>
+                                                                                    <option value="67">
+                                                Удаленный! Не использовать! Мегафон
+                                            </option>
+                                                                                    <option value="111">
+                                                Удаленный! Не использовать! Продажи и маркетинг
+                                            </option>
+                                                                                    <option value="92">
+                                                Удаленный! Не использовать! ТА ГИС ЖКХ
+                                            </option>
+                                                                                    <option value="26">
+                                                Удаленный! Не использовать! Тестовый проект
+                                            </option>
+                                                                                    <option value="83">
+                                                Удаленный! Не использовать! Тестовый проект 3
+                                            </option>
+                                                                                    <option value="84">
+                                                Удаленный! Не использовать! Тестовый проект 4 (описание)
+                                            </option>
+                                                                                    <option value="25">
+                                                Удаленный! Не использовать! Тестовый проект-2
+                                            </option>
+                                                                                    <option value="107">
+                                                Удаленный! Не использовать! Эвотор
+                                            </option>
+                                                                                    <option value="230">
+                                                Уникальное название
+                                            </option>
+                                                                                    <option value="231">
+                                                Уникальное название
+                                            </option>
+                                                                                    <option value="232">
+                                                Уникальное название2
+                                            </option>
+                                                                                    <option value="233">
+                                                Уникальное название3
+                                            </option>
+                                                                                    <option value="38">
+                                                ЦЕРЕБРО
+                                            </option>
+                                                                                    <option value="62">
+                                                ЦКВ
+                                            </option>
+                                                                                    <option value="45">
+                                                ЦУМ
+                                            </option>
+                                                                                    <option value="212">
+                                                Человеческий департамент
+                                            </option>
+                                                                                    <option value="105">
+                                                Эвотор
+                                            </option>
+                                                                                    <option value="71">
+                                                Эльдорадо
+                                            </option>
+                                                                                    <option value="249">
+                                                ЭМПАО
+                                            </option>
+                                                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 410px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-project-uj-container"><span class="select2-selection__rendered" id="select2-project-uj-container" title="&#10;                                                'Ланит - ЭЛПАСС&quot; &lt;&amp;&gt;&#10;                                            ">
+                                                'Ланит - ЭЛПАСС" &lt;&amp;&gt;
+                                            </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                                                                                                <div class="col-lg-2">
+                                    <label>
+                                        Начальная дата:
+                                    </label>
+                                    <div class="input-group m-input-group m-input-group--square">
+                                        <input type="text" class="form-control m-datepicker" readonly="" placeholder="Выберите дату" name="date_from" value="13.10.2018" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <label>
+                                        Конечная дата:
+                                    </label>
+                                    <div class="input-group m-input-group m-input-group--square">
+                                        <input type="text" class="form-control m-datepicker" readonly="" placeholder="Выберите дату" name="date_to" value="13.10.2018" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <label>
+                                         
+                                    </label>
+                                    <div class="input-group m-input-group m-input-group--square">
+                                        <button type="submit" class="btn btn-primary">
+                                            Применить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row table-container">    <table class="table table-striped m-table">
+        <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Активность</th>
+            <th>Время</th>
+            <th class="m--visible-desktop">Комментарии</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="3">По выбранным параметрам поиска ничего не найдено</td>
+            <td class="m--visible-desktop"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+                        </div>
+                    </form>
+                    <!--end::Form-->
+                </div>
+                <!--end::Portlet-->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $(".m-select2").select2({placeholder: "Выберите проект"});
+
+            $('.m-select2[name="user"]').select2({width: "auto"});
+
+            $(".m-datepicker").datepicker({
+                todayHighlight: !0,
+                orientation: "bottom left",
+                templates: {
+                    leftArrow: '&lt;i class="la la-angle-left"&gt;&lt;/i&gt;',
+                    rightArrow: '&lt;i class="la la-angle-right"&gt;&lt;/i&gt;'
+                },
+                format: 'dd.mm.yyyy',
+                language: 'ru',
+                todayBtn: "linked",
+            });
+
+            $('form[name="filter"]').on('click', 'button[type="submit"]', function (event) {
+                event.preventDefault();
+
+                var classes = 'm-loader m-loader--light m-loader--left';
+                var $btn = $(this)
+                $btn.addClass(classes);
+
+                var data = {filter: {}};
+                $.each($(this).closest('form').serializeArray(), function (idx, item) {
+                    data.filter[item.name] = item.value;
+                });
+
+                console.log(data);
+
+                var request = $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    data: data,
+                    beforeSend: function () {
+                        console.log('ajax...');
+                    }
+                });
+
+                request.done(function (response) {
+                    if (response.status == 'success') {
+                        console.log(response);
+                        $btn.removeClass(classes);
+                        $('.table-container').html(response.html);
+                    }
+                });
+
+                request.fail(function (jqXHR, textStatus) {
+                    console.log("Request failed: " + textStatus);
+                });
+
+                return false;
+            });
+
+            $('button[type="submit"]').click();
+        })
+    </script>
+            </div>
+        </div>
+        <!-- end:: Body -->
+
+        
+<!-- begin::Footer -->
+<footer class="m-grid__item&#9;&#9;m-footer ">
+    <div class="m-container m-container--fluid m-container--full-height m-page__container">
+        <div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+            <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+							<span class="m-footer__copyright">
+								2018 © Quality Lab
+							</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end::Footer -->    </div>
+    <!-- end:: Page -->
+
+    <!-- begin::Quick Sidebar -->
+<div id="m_quick_sidebar" class="m-quick-sidebar m-quick-sidebar--tabbed m-quick-sidebar--skin-light">
+    <div class="m-quick-sidebar__content m--hide">
+				<span id="m_quick_sidebar_close" class="m-quick-sidebar__close">
+					<i class="la la-close"></i>
+				</span>
+        <ul id="m_quick_sidebar_tabs" class="nav nav-tabs m-tabs m-tabs-line m-tabs-line--brand" role="tablist">
+            <li class="nav-item m-tabs__item">
+                <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_quick_sidebar_tabs_messenger" role="tab">
+                    Messages
+                </a>
+            </li>
+            <li class="nav-item m-tabs__item">
+                <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_quick_sidebar_tabs_settings" role="tab">
+                    Settings
+                </a>
+            </li>
+            <li class="nav-item m-tabs__item">
+                <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_quick_sidebar_tabs_logs" role="tab">
+                    Logs
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active m-scrollable" id="m_quick_sidebar_tabs_messenger" role="tabpanel">
+                <div class="m-messenger m-messenger--message-arrow m-messenger--skin-light">
+                    <div class="m-messenger__messages">
+                        <div class="m-messenger__message m-messenger__message--in">
+                            <div class="m-messenger__message-pic">
+                                <img src="/assets/app/media/img//users/user3.jpg?180913_2306" alt="" />
+                            </div>
+                            <div class="m-messenger__message-body">
+                                <div class="m-messenger__message-arrow"></div>
+                                <div class="m-messenger__message-content">
+                                    <div class="m-messenger__message-username">
+                                        Megan wrote
+                                    </div>
+                                    <div class="m-messenger__message-text">
+                                        Hi Bob. What time will be the meeting ?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-messenger__message m-messenger__message--out">
+                            <div class="m-messenger__message-body">
+                                <div class="m-messenger__message-arrow"></div>
+                                <div class="m-messenger__message-content">
+                                    <div class="m-messenger__message-text">
+                                        Hi Megan. It's at 2.30PM
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-messenger__message m-messenger__message--in">
+                            <div class="m-messenger__message-pic">
+                                <img src="/assets/app/media/img//users/user3.jpg?180913_2306" alt="" />
+                            </div>
+                            <div class="m-messenger__message-body">
+                                <div class="m-messenger__message-arrow"></div>
+                                <div class="m-messenger__message-content">
+                                    <div class="m-messenger__message-username">
+                                        Megan wrote
+                                    </div>
+                                    <div class="m-messenger__message-text">
+                                        Will the development team be joining ?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-messenger__message m-messenger__message--out">
+                            <div class="m-messenger__message-body">
+                                <div class="m-messenger__message-arrow"></div>
+                                <div class="m-messenger__message-content">
+                                    <div class="m-messenger__message-text">
+                                        Yes sure. I invited them as well
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-messenger__datetime">
+                            2:30PM
+                        </div>
+                        <div class="m-messenger__message m-messenger__message--in">
+                            <div class="m-messenger__message-pic">
+                                <img src="/assets/app/media/img//users/user3.jpg?180913_2306" alt="" />
+                            </div>
+                            <div class="m-messenger__message-body">
+                                <div class="m-messenger__message-arrow"></div>
+                                <div class="m-messenger__message-content">
+                                    <div class="m-messenger__message-username">
+                                        Megan wrote
+                                    </div>
+                                    <div class="m-messenger__message-text">
+                                        Noted. For the Coca-Cola Mobile App project as well ?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-messenger__message m-messenger__message--out">
+                            <div class="m-messenger__message-body">
+                                <div class="m-messenger__message-arrow"></div>
+                                <div class="m-messenger__message-content">
+                                    <div class="m-messenger__message-text">
+                                        Yes, sure.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-messenger__message m-messenger__message--out">
+                            <div class="m-messenger__message-body">
+                                <div class="m-messenger__message-arrow"></div>
+                                <div class="m-messenger__message-content">
+                                    <div class="m-messenger__message-text">
+                                        Please also prepare the quotation for the Loop CRM project as well.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-messenger__datetime">
+                            3:15PM
+                        </div>
+                        <div class="m-messenger__message m-messenger__message--in">
+                            <div class="m-messenger__message-no-pic m--bg-fill-danger">
+										<span>
+											M
+										</span>
+                            </div>
+                            <div class="m-messenger__message-body">
+                                <div class="m-messenger__message-arrow"></div>
+                                <div class="m-messenger__message-content">
+                                    <div class="m-messenger__message-username">
+                                        Megan wrote
+                                    </div>
+                                    <div class="m-messenger__message-text">
+                                        Noted. I will prepare it.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-messenger__message m-messenger__message--out">
+                            <div class="m-messenger__message-body">
+                                <div class="m-messenger__message-arrow"></div>
+                                <div class="m-messenger__message-content">
+                                    <div class="m-messenger__message-text">
+                                        Thanks Megan. I will see you later.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-messenger__message m-messenger__message--in">
+                            <div class="m-messenger__message-pic">
+                                <img src="/assets/app/media/img//users/user3.jpg?180913_2306" alt="" />
+                            </div>
+                            <div class="m-messenger__message-body">
+                                <div class="m-messenger__message-arrow"></div>
+                                <div class="m-messenger__message-content">
+                                    <div class="m-messenger__message-username">
+                                        Megan wrote
+                                    </div>
+                                    <div class="m-messenger__message-text">
+                                        Sure. See you in the meeting soon.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-messenger__seperator"></div>
+                    <div class="m-messenger__form">
+                        <div class="m-messenger__form-controls">
+                            <input type="text" name="" placeholder="Type here..." class="m-messenger__form-input" />
+                        </div>
+                        <div class="m-messenger__form-tools">
+                            <a href="" class="m-messenger__form-attachment">
+                                <i class="la la-paperclip"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane  m-scrollable" id="m_quick_sidebar_tabs_settings" role="tabpanel">
+                <div class="m-list-settings">
+                    <div class="m-list-settings__group">
+                        <div class="m-list-settings__heading">
+                            General Settings
+                        </div>
+                        <div class="m-list-settings__item">
+									<span class="m-list-settings__item-label">
+										Email Notifications
+									</span>
+                            <span class="m-list-settings__item-control">
+										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+											<label>
+												<input type="checkbox" checked="checked" name="" />
+												<span></span>
+											</label>
+										</span>
+									</span>
+                        </div>
+                        <div class="m-list-settings__item">
+									<span class="m-list-settings__item-label">
+										Site Tracking
+									</span>
+                            <span class="m-list-settings__item-control">
+										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+											<label>
+												<input type="checkbox" name="" />
+												<span></span>
+											</label>
+										</span>
+									</span>
+                        </div>
+                        <div class="m-list-settings__item">
+									<span class="m-list-settings__item-label">
+										SMS Alerts
+									</span>
+                            <span class="m-list-settings__item-control">
+										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+											<label>
+												<input type="checkbox" name="" />
+												<span></span>
+											</label>
+										</span>
+									</span>
+                        </div>
+                        <div class="m-list-settings__item">
+									<span class="m-list-settings__item-label">
+										Backup Storage
+									</span>
+                            <span class="m-list-settings__item-control">
+										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+											<label>
+												<input type="checkbox" name="" />
+												<span></span>
+											</label>
+										</span>
+									</span>
+                        </div>
+                        <div class="m-list-settings__item">
+									<span class="m-list-settings__item-label">
+										Audit Logs
+									</span>
+                            <span class="m-list-settings__item-control">
+										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+											<label>
+												<input type="checkbox" checked="checked" name="" />
+												<span></span>
+											</label>
+										</span>
+									</span>
+                        </div>
+                    </div>
+                    <div class="m-list-settings__group">
+                        <div class="m-list-settings__heading">
+                            System Settings
+                        </div>
+                        <div class="m-list-settings__item">
+									<span class="m-list-settings__item-label">
+										System Logs
+									</span>
+                            <span class="m-list-settings__item-control">
+										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+											<label>
+												<input type="checkbox" name="" />
+												<span></span>
+											</label>
+										</span>
+									</span>
+                        </div>
+                        <div class="m-list-settings__item">
+									<span class="m-list-settings__item-label">
+										Error Reporting
+									</span>
+                            <span class="m-list-settings__item-control">
+										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+											<label>
+												<input type="checkbox" name="" />
+												<span></span>
+											</label>
+										</span>
+									</span>
+                        </div>
+                        <div class="m-list-settings__item">
+									<span class="m-list-settings__item-label">
+										Applications Logs
+									</span>
+                            <span class="m-list-settings__item-control">
+										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+											<label>
+												<input type="checkbox" name="" />
+												<span></span>
+											</label>
+										</span>
+									</span>
+                        </div>
+                        <div class="m-list-settings__item">
+									<span class="m-list-settings__item-label">
+										Backup Servers
+									</span>
+                            <span class="m-list-settings__item-control">
+										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+											<label>
+												<input type="checkbox" checked="checked" name="" />
+												<span></span>
+											</label>
+										</span>
+									</span>
+                        </div>
+                        <div class="m-list-settings__item">
+									<span class="m-list-settings__item-label">
+										Audit Logs
+									</span>
+                            <span class="m-list-settings__item-control">
+										<span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+											<label>
+												<input type="checkbox" name="" />
+												<span></span>
+											</label>
+										</span>
+									</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane  m-scrollable" id="m_quick_sidebar_tabs_logs" role="tabpanel">
+                <div class="m-list-timeline">
+                    <div class="m-list-timeline__group">
+                        <div class="m-list-timeline__heading">
+                            System Logs
+                        </div>
+                        <div class="m-list-timeline__items">
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    12 new users registered
+                                    <span class="m-badge m-badge--warning m-badge--wide">
+												important
+											</span>
+                                </a>
+                                <span class="m-list-timeline__time">
+											Just now
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    System shutdown
+                                </a>
+                                <span class="m-list-timeline__time">
+											11 mins
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    New invoice received
+                                </a>
+                                <span class="m-list-timeline__time">
+											20 mins
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    Database overloaded 89%
+                                    <span class="m-badge m-badge--success m-badge--wide">
+												resolved
+											</span>
+                                </a>
+                                <span class="m-list-timeline__time">
+											1 hr
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    System error
+                                </a>
+                                <span class="m-list-timeline__time">
+											2 hrs
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    Production server down
+                                    <span class="m-badge m-badge--danger m-badge--wide">
+												pending
+											</span>
+                                </a>
+                                <span class="m-list-timeline__time">
+											3 hrs
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    Production server up
+                                </a>
+                                <span class="m-list-timeline__time">
+											5 hrs
+										</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-list-timeline__group">
+                        <div class="m-list-timeline__heading">
+                            Applications Logs
+                        </div>
+                        <div class="m-list-timeline__items">
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    New order received
+                                    <span class="m-badge m-badge--info m-badge--wide">
+												urgent
+											</span>
+                                </a>
+                                <span class="m-list-timeline__time">
+											7 hrs
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    12 new users registered
+                                </a>
+                                <span class="m-list-timeline__time">
+											Just now
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    System shutdown
+                                </a>
+                                <span class="m-list-timeline__time">
+											11 mins
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    New invoices received
+                                </a>
+                                <span class="m-list-timeline__time">
+											20 mins
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    Database overloaded 89%
+                                </a>
+                                <span class="m-list-timeline__time">
+											1 hr
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    System error
+                                    <span class="m-badge m-badge--info m-badge--wide">
+												pending
+											</span>
+                                </a>
+                                <span class="m-list-timeline__time">
+											2 hrs
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    Production server down
+                                </a>
+                                <span class="m-list-timeline__time">
+											3 hrs
+										</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-list-timeline__group">
+                        <div class="m-list-timeline__heading">
+                            Server Logs
+                        </div>
+                        <div class="m-list-timeline__items">
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    Production server up
+                                </a>
+                                <span class="m-list-timeline__time">
+											5 hrs
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    New order received
+                                </a>
+                                <span class="m-list-timeline__time">
+											7 hrs
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    12 new users registered
+                                </a>
+                                <span class="m-list-timeline__time">
+											Just now
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    System shutdown
+                                </a>
+                                <span class="m-list-timeline__time">
+											11 mins
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    New invoice received
+                                </a>
+                                <span class="m-list-timeline__time">
+											20 mins
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    Database overloaded 89%
+                                </a>
+                                <span class="m-list-timeline__time">
+											1 hr
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    System error
+                                </a>
+                                <span class="m-list-timeline__time">
+											2 hrs
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    Production server down
+                                </a>
+                                <span class="m-list-timeline__time">
+											3 hrs
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    Production server up
+                                </a>
+                                <span class="m-list-timeline__time">
+											5 hrs
+										</span>
+                            </div>
+                            <div class="m-list-timeline__item">
+                                <span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+                                <a href="" class="m-list-timeline__text">
+                                    New order received
+                                </a>
+                                <span class="m-list-timeline__time">
+											1117 hrs
+										</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end::Quick Sidebar -->
+    
+<!-- begin::Scroll Top -->
+<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">
+    <i class="la la-arrow-up"></i>
+</div>
+<!-- end::Scroll Top -->
+    
+<script src="/assets/demo/default/base/scripts.bundle.js?180913_2306" type="text/javascript"></script>
+<!--begin::Page Snippets -->
+<script src="/assets/app/js/dashboard.js?180913_2306" type="text/javascript"></script>
+
+<script src="/assets/demo/default/custom/components/forms/widgets/select2.js?180913_2306" type="text/javascript"></script>
+<!--end::Page Snippets -->
+<!-- end::Body -->
+
+</body></html>
