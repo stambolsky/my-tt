@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/my-tt.iws" beforeDir="false" afterPath="$PROJECT_DIR$/my-tt.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/ql/tt/Base/CssLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ql/tt/Base/CssLocators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/ql/tt/Base/ProfileBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ql/tt/Base/ProfileBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ql/tt/ModalWindowAddDevicesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ql/tt/ModalWindowAddDevicesTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/ql/tt/ProfilePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ql/tt/ProfilePageTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -184,12 +183,12 @@
     <session id="-1975400145">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="52" />
-          <entry key="project.open.time.0" value="44" />
+          <entry key="project.closed" value="55" />
+          <entry key="project.open.time.0" value="47" />
           <entry key="project.open.time.1" value="7" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.opened" value="53" />
+          <entry key="project.opened" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -211,14 +210,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="9" />
-          <entry key="java" value="5201" />
+          <entry key="java" value="5319" />
           <entry key="properties" value="44" />
           <entry key="xml" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5201" />
+          <entry key="JAVA" value="5319" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="Properties" value="44" />
           <entry key="XML" value="31" />
@@ -231,8 +230,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/ql/tt/ProfilePageTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="218" lean-forward="true" selection-start-line="218" selection-end-line="218" />
+            <state relative-caret-position="2083">
+              <caret line="192" column="107" selection-start-line="192" selection-start-column="107" selection-end-line="192" selection-end-column="107" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -243,8 +242,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/ql/tt/Base/CssLocators.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="62" column="97" lean-forward="true" selection-start-line="62" selection-start-column="97" selection-end-line="62" selection-end-column="97" />
+            <state relative-caret-position="191">
+              <caret line="40" column="93" selection-start-line="40" selection-start-column="93" selection-end-line="40" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -255,16 +254,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/ql/tt/Base/ProfileBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+            <state relative-caret-position="309">
+              <caret line="141" column="5" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2867#2868#0" expanded="true" />
-                <element signature="e#2914#2915#0" expanded="true" />
-                <element signature="e#2983#2984#0" expanded="true" />
-                <element signature="e#3038#3039#0" expanded="true" />
-                <element signature="e#3096#3097#0" expanded="true" />
-                <element signature="e#3142#3143#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -447,8 +440,8 @@
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="680" />
-    <option name="y" value="57" />
+    <option name="x" value="725" />
+    <option name="y" value="90" />
     <option name="width" value="1210" />
     <option name="height" value="718" />
   </component>
@@ -533,7 +526,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539537980213" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539540267351" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -558,7 +551,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProfilePageTests.testOpenedWindowShortResume">
+  <component name="RunManager" selected="JUnit.ProfilePageTests.testOpenNewTabCreateResume">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -567,6 +560,27 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProfilePageTests.testOpenNewTabCreateResume" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-tt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.ql.tt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.ql.tt" />
+      <option name="MAIN_CLASS_NAME" value="ru.ql.tt.ProfilePageTests" />
+      <option name="METHOD_NAME" value="testOpenNewTabCreateResume" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -582,27 +596,6 @@
       <option name="PACKAGE_NAME" value="ru.ql.tt" />
       <option name="MAIN_CLASS_NAME" value="ru.ql.tt.ProfilePageTests" />
       <option name="METHOD_NAME" value="testOpenedWindowAddDevices" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProfilePageTests.testOpenedWindowSchduleWork" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="my-tt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.ql.tt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.ql.tt" />
-      <option name="MAIN_CLASS_NAME" value="ru.ql.tt.ProfilePageTests" />
-      <option name="METHOD_NAME" value="testOpenedWindowSchduleWork" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -688,18 +681,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.ProfilePageTests.testOpenedWindowAddDevices" />
-      <item itemvalue="JUnit.ProfilePageTests.testOpenedWindowSchduleWork" />
       <item itemvalue="JUnit.ProfilePageTests.testShortResumeIconCross" />
       <item itemvalue="JUnit.ProfilePageTests.testShortResumeButtonCloseNotSave" />
       <item itemvalue="JUnit.ProfilePageTests.testOpenedWindowShortResume" />
+      <item itemvalue="JUnit.ProfilePageTests.testOpenNewTabCreateResume" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProfilePageTests.testOpenNewTabCreateResume" />
         <item itemvalue="JUnit.ProfilePageTests.testOpenedWindowShortResume" />
         <item itemvalue="JUnit.ProfilePageTests.testShortResumeButtonCloseNotSave" />
         <item itemvalue="JUnit.ProfilePageTests.testShortResumeIconCross" />
         <item itemvalue="JUnit.ProfilePageTests.testOpenedWindowAddDevices" />
-        <item itemvalue="JUnit.ProfilePageTests.testOpenedWindowSchduleWork" />
       </list>
     </recent_temporary>
   </component>
@@ -788,26 +781,14 @@
       <workItem from="1539529922929" duration="36000" />
       <workItem from="1539529966745" duration="7000" />
       <workItem from="1539529983746" duration="878000" />
-      <workItem from="1539530958663" duration="6089000" />
+      <workItem from="1539530958663" duration="6210000" />
+      <workItem from="1539538373049" duration="76000" />
+      <workItem from="1539538489183" duration="217000" />
+      <workItem from="1539538791699" duration="1457000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProfilePageTests_testAddDevicesButtonCloseNotSave - 2018.10.14 at 19h 56m 45s.xml">
-      <configuration name="ProfilePageTests.testAddDevicesButtonCloseNotSave" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProfilePageTests_testAddDevicesIconCross - 2018.10.14 at 19h 57m 33s.xml">
-      <configuration name="ProfilePageTests.testAddDevicesIconCross" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProfilePageTests_testAddDevicesIconCross - 2018.10.14 at 19h 58m 00s.xml">
-      <configuration name="ProfilePageTests.testAddDevicesIconCross" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProfilePageTests - 2018.10.14 at 19h 59m 04s.xml">
-      <configuration name="ProfilePageTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProfilePageTests_testOpenedWindowSchduleWork - 2018.10.14 at 19h 59m 40s.xml">
-      <configuration name="ProfilePageTests.testOpenedWindowSchduleWork" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ProfilePageTests_testOpenedWindowSchduleWork - 2018.10.14 at 20h 01m 03s.xml">
       <configuration name="ProfilePageTests.testOpenedWindowSchduleWork" configurationId="JUnit" />
     </history-entry>
@@ -823,9 +804,24 @@
     <history-entry file="ProfilePageTests_testOpenedWindowShortResume - 2018.10.14 at 20h 02m 21s.xml">
       <configuration name="ProfilePageTests.testOpenedWindowShortResume" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ProfilePageTests_testOpenNewTabCreateResume - 2018.10.14 at 20h 52m 11s.xml">
+      <configuration name="ProfilePageTests.testOpenNewTabCreateResume" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProfilePageTests_testOpenNewTabCreateResume - 2018.10.14 at 20h 53m 22s.xml">
+      <configuration name="ProfilePageTests.testOpenNewTabCreateResume" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProfilePageTests_testOpenNewTabCreateResume - 2018.10.14 at 20h 56m 16s.xml">
+      <configuration name="ProfilePageTests.testOpenNewTabCreateResume" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProfilePageTests_testOpenNewTabCreateResume - 2018.10.14 at 20h 57m 25s.xml">
+      <configuration name="ProfilePageTests.testOpenNewTabCreateResume" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProfilePageTests_testOpenNewTabCreateResume - 2018.10.14 at 20h 57m 43s.xml">
+      <configuration name="ProfilePageTests.testOpenNewTabCreateResume" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52649000" />
+    <option name="totallyTimeSpent" value="54520000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -840,10 +836,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="640" y="123" width="1210" height="718" extended-state="0" />
+    <frame x="741" y="114" width="1210" height="718" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" id="Project" order="0" visible="true" weight="0.16866438" />
+      <window_info id="Project" order="0" visible="true" weight="0.17636986" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Web" order="2" weight="0.25" />
       <window_info id="Designer" order="3" />
@@ -854,7 +850,7 @@
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49914384" visible="true" weight="0.38338658" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49914384" weight="0.38338658" />
       <window_info anchor="bottom" id="EJB" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49914384" weight="0.399361" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
@@ -862,7 +858,7 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="CVS" order="8" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3258786" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.38977635" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.38977635" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50085616" side_tool="true" weight="0.399361" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.3290735" />
@@ -1029,8 +1025,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/ql/tt/Base/CssLocators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="62" column="97" lean-forward="true" selection-start-line="62" selection-start-column="97" selection-end-line="62" selection-end-column="97" />
+        <state relative-caret-position="191">
+          <caret line="40" column="93" selection-start-line="40" selection-start-column="93" selection-end-line="40" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1039,24 +1035,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/ql/tt/Base/ProfileBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+        <state relative-caret-position="309">
+          <caret line="141" column="5" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2867#2868#0" expanded="true" />
-            <element signature="e#2914#2915#0" expanded="true" />
-            <element signature="e#2983#2984#0" expanded="true" />
-            <element signature="e#3038#3039#0" expanded="true" />
-            <element signature="e#3096#3097#0" expanded="true" />
-            <element signature="e#3142#3143#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/ql/tt/ProfilePageTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="218" lean-forward="true" selection-start-line="218" selection-end-line="218" />
+        <state relative-caret-position="2083">
+          <caret line="192" column="107" selection-start-line="192" selection-start-column="107" selection-end-line="192" selection-end-column="107" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

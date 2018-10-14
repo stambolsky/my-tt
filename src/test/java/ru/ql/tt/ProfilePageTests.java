@@ -5,8 +5,13 @@ import org.junit.Test;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.disappear;
+import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Selenide.switchTo;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.url;
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
+import static org.testng.AssertJUnit.assertTrue;
 import static ru.ql.tt.Base.CssLocators.*;
 import static ru.ql.tt.Base.ProfileBase.openModalWindow;
 
@@ -185,7 +190,7 @@ public class ProfilePageTests extends TestBase {
     @Test
     public void testOpenedWindowAddDevices() {
         profileBase.addDevice(4, 5, "Test OS");
-        assertEquals("Запись \"Окружение\" успешно создана", profileBase.getPopupWindowText(POPUP_WINDOWS));
+        assertEquals("Запись \"Окружение\" успешно создана", profileBase.getPopupWindowText(POPUP_WINDOWS)) ;
         profileBase.deleteDevice();
     }
 
@@ -216,7 +221,22 @@ public class ProfilePageTests extends TestBase {
     }
 
     //Проверка того, что при нажатии на кнопку “Сформировать резюме” в новой вкладке открывается превью резюме.
-
+    @Test
+    public void testOpenNewTabCreateResume() {
+        BUTTON_CREATE_RESUME.shouldBe(exist).click();
+        String idWindow = getWebDriver().getWindowHandle();
+        profileBase.switchWindow(idWindow);
+        String titleNewWindows = getWebDriver().getTitle();
+        assertEquals(titleNewWindows, "Первая страница");
+        String firstname = WINDOW_RESUME_FIRST_NAME.getText();
+        String lastname = WINDOW_RESUME_LAST_NAME.getText();
+        String name = lastname + " " + firstname;
+        String place = WINDOW_RESUME_PLACE.should(appear).getText();
+        getWebDriver().close();
+        switchTo().window(idWindow);
+        assertTrue(FIRST_AND_LAST_NAME.should(appear).getText().equalsIgnoreCase(name));
+        assertTrue(PROFILE_RESUME_FIELD_PLACE.should(appear).getText().equalsIgnoreCase(place));
+    }
 
 
 

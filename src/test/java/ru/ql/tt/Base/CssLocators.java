@@ -26,8 +26,7 @@ public class CssLocators {
     public static SelenideElement BUTTON_CREATE_RESUME = $(".m-portlet__head-title div a");
     public static SelenideElement HEADER = $("//div[contains(@class,'m-portlet__head m-stack m-stack--ver m-stack--general')]");
     public static SelenideElement LOGO = $("//div[@class='m-portlet']//div[@class='avatarCover']");
-    public static SelenideElement FIRST_AND_LAST_NAME = $("//span[@id='headerName']");
-    public static SelenideElement PROFILE_BUTTON_CREATE_RESUME = $("//a[@class='btn btn-brand m-btn']");
+    public static SelenideElement FIRST_AND_LAST_NAME = $(".m-portlet__head-title span");
     public static SelenideElement BLOCK_MENU = $("//div[@class='m-stack__item m-stack__item--left m-stack--ver m-stack__item--middle m-stack__item--fluid']");
     public static SelenideElement TITLE_PROFILE = $(".m-subheader__title");
     public static SelenideElement BLOCK_RESUME = $(".m-portlet:nth-child(2)");
@@ -39,7 +38,7 @@ public class CssLocators {
     public static SelenideElement BLOCK_RESUME_TEXT_SHORT = $(".m-list-search__result-item-text.post-description");
 
     public static SelenideElement BLOCK_SCHEDULE_WORK = $("//div[@id='m_tabs_6_1']/div[@class='m-portlet'][2]");
-    public static SelenideElement PROFILE_RESUME_FIELD_PLACE = $("//span[@class='m-list-search__result-item-text post-name']");
+    public static SelenideElement PROFILE_RESUME_FIELD_PLACE = $(".m-portlet__body .post-name");
     public static SelenideElement PROFILE_RESUME_BUTTON_EDIT = $("//button[@type='button'][contains(text(),'Редактировать резюме')]");
     public static SelenideElement PROFILE_RESUME_SHORT_RESUME = $("//span[@class='m-list-search__result-item-text post-description']");
     public static SelenideElement SCHEDULE_WORK_BLOCK = $(".m-portlet:nth-child(3)");
@@ -65,9 +64,9 @@ public class CssLocators {
 
     //------------Window create resume------//
 
-    public static SelenideElement WINDOW_RESUME_FIRST_NAME = $("//div[@class='fields']//div[3]/p[1]");
-    public static SelenideElement WINDOW_RESUME_LAST_NAME = $("//div[@class='fields']//div[3]/p[2]");
-    public static SelenideElement WINDOW_RESUME_PLACE = $("//div[@class='fields']//div[4]");
+    public static SelenideElement WINDOW_RESUME_FIRST_NAME = $(".user-name p:first-child");
+    public static SelenideElement WINDOW_RESUME_LAST_NAME = $(".user-name p:last-child");
+    public static SelenideElement WINDOW_RESUME_PLACE = $(".user-position-name p");
 
 
     //------------Resume--------------------//

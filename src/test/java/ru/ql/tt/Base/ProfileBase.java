@@ -7,9 +7,12 @@ import org.openqa.selenium.support.Color;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Selenide.switchTo;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 import static ru.ql.tt.Base.CssLocators.*;
@@ -126,6 +129,16 @@ public class ProfileBase {
         assertEquals("Удаление устройства", EDIT_WINDOW_TITLE.getText());
         BUTTON_DELETE_DEVICE.shouldBe(appear).click();
         //assertEquals("Устройство удалено", getPopupWindowText(POPUP_WINDOWS));
+    }
+
+    public void switchWindow(String idWindow) {
+        Set<String> idOpeningWindows = getWebDriver().getWindowHandles();
+        for (String tab : idOpeningWindows) {
+            if (!tab.equals(idWindow)) {
+                switchTo().window(tab);
+                break;
+            }
+        }
     }
 
 }
