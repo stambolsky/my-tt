@@ -21,13 +21,9 @@ public class CssLocators {
 
     //------------ProfilePage--------------//
 
-    public static SelenideElement NAME_USER = $("//span[@id='headerName']");
     public static SelenideElement AVATAR = $("img.avatar");
     public static SelenideElement BUTTON_CREATE_RESUME = $(".m-portlet__head-title div a");
-    public static SelenideElement HEADER = $("//div[contains(@class,'m-portlet__head m-stack m-stack--ver m-stack--general')]");
-    public static SelenideElement LOGO = $("//div[@class='m-portlet']//div[@class='avatarCover']");
     public static SelenideElement FIRST_AND_LAST_NAME = $(".m-portlet__head-title span");
-    public static SelenideElement BLOCK_MENU = $("//div[@class='m-stack__item m-stack__item--left m-stack--ver m-stack__item--middle m-stack__item--fluid']");
     public static SelenideElement TITLE_PROFILE = $(".m-subheader__title");
     public static SelenideElement BLOCK_RESUME = $(".m-portlet:nth-child(2)");
     public static SelenideElement BLOCK_RESUME_TITLE = $(".m-portlet:nth-child(2) .m-portlet__head-text");
@@ -37,10 +33,7 @@ public class CssLocators {
     public static SelenideElement BLOCK_RESUME_FAVICON_SHORT = $(".flaticon-file-1");
     public static SelenideElement BLOCK_RESUME_TEXT_SHORT = $(".m-list-search__result-item-text.post-description");
 
-    public static SelenideElement BLOCK_SCHEDULE_WORK = $("//div[@id='m_tabs_6_1']/div[@class='m-portlet'][2]");
     public static SelenideElement PROFILE_RESUME_FIELD_PLACE = $(".m-portlet__body .post-name");
-    public static SelenideElement PROFILE_RESUME_BUTTON_EDIT = $("//button[@type='button'][contains(text(),'Редактировать резюме')]");
-    public static SelenideElement PROFILE_RESUME_SHORT_RESUME = $("//span[@class='m-list-search__result-item-text post-description']");
     public static SelenideElement SCHEDULE_WORK_BLOCK = $(".m-portlet:nth-child(3)");
     public static SelenideElement SCHEDULE_WORK_BLOCK_TITLE = $(".m-portlet:nth-child(3) .m-portlet__head-text");
     public static SelenideElement SCHEDULE_WORK_BUTTON_EDIT = $(".m-portlet:nth-child(3) button");
@@ -53,7 +46,6 @@ public class CssLocators {
     public static ElementsCollection CONTACTS_BLOCK_TEXT = $$(".m-portlet:nth-child(4) .m-list-search__result-item-text");
     public static SelenideElement PROFILE_CONTACTS_FIELD_PHONE = $(".m-list-search .phone");
     public static SelenideElement PROFILE_CONTACTS_FIELD_SKYPE = $(".m-portlet__body .skype");
-    public static SelenideElement PROFILE_CONTACTS_FIELD_EMAIL = $(".m-portlet__body #corporate-email");
 
     public static SelenideElement BLOCK_DEVICES = $(".m-portlet:nth-child(5)");
     public static SelenideElement BLOCK_DEVICES_BUTTON_ADD = $(".m-portlet:nth-child(5) button");
@@ -95,18 +87,11 @@ public class CssLocators {
 
     public static SelenideElement MODAL_WINDOW_DEVICE = $("#popup-add-environment .modal-content");
     public static SelenideElement MODAL_WINDOW_DEVICE_TITLE = $("#popup-add-environment .modal-title");
-    public static SelenideElement MODAL_WINDOW_DEVICE_BUTTON_CLOSE_NOT_SAVE = $("#popup-add-environment .modal-footer button:first-child");
-    public static SelenideElement BUTTON_ADD_DEVICES = $("//span[contains(text(),'Добавить устройство')]");
     public static SelenideElement TYPE_PC = $("#parentTypeAdd .m-input");
-    public static SelenideElement TYPE_PHONE = $("//div[@id='parentTypeAdd']//option[@value='6'][contains(text(),'Телефон')]");
-    public static SelenideElement PRODUCER_FIELD = $("//div[@id='popup-add-environment']//input[@name='manufacturer-device']");
-    public static SelenideElement TABLE_FIELD_TYPE_PHONE = $("//td[contains(text(),'Телефон')]");
-    public static SelenideElement TABLE_FIELD_TYPE_PC  = $("//td[contains(text(),'ПК')]");
     public static SelenideElement TABLE_FIELD_OS = $(".m-datatable__body tr:first-child td:nth-child(4)");
     public static SelenideElement TABLE_ICON_TRASH = $(".m-datatable__body tr:first-child a:nth-child(2)");
     public static SelenideElement TABLE_ICON_EDIT = $(".m-datatable__body tr:first-child .edit-environment");
     public static SelenideElement BUTTON_DELETE_DEVICE = $("#popup-delete-environment .btn-primary");
-    public static SelenideElement TABLE_MESSAGE_EMPTY = $("//div[@class='alert m-alert--default col-lg-12 no-items']");
 
     public static SelenideElement TYPE_OS = $("#popup-add-environment [name = 'version-os'");
     public static SelenideElement BUTTON_DEVICE_SAVE = $("#popup-add-environment .btn-primary");
@@ -120,14 +105,11 @@ public class CssLocators {
 
     //--------------Contacts-----------------//
 
-    public static SelenideElement BUTTON_EDIT_CONTACTS = $("//button[contains(text(),'Редактировать контакты')]");
     public static SelenideElement MODAL_WINDOW_EDIT_CONTACTS = $("#popup-edit-contact .modal-content");
-    public static SelenideElement MODAL_WINDOW_EDIT_CONTACTS_CLOSE_NOT_SAVE = $("#popup-edit-contact .modal-footer button:first-child");
     public static SelenideElement TITLE_MODAL_WINDOW_EDIT_CONTACTS = $("#popup-edit-contact .modal-title");
     public static SelenideElement MODAL_EDIT_PHONE_FIELD = $(".row #phone");
     public static SelenideElement MODAL_EDIT_SKYPE_FIELD = $(".row #skype");
     public static SelenideElement MODAL_EDIT_SAVE_BUTTON = $("#popup-edit-contact .update-contact-info");
-    public static SelenideElement MODAL_EDIT_EMAIL_FIELD = $(".tab-content #corporate-email");
     public static SelenideElement MODAL_EDIT_BUTTON_CLOSE_NOT_SAVE = $("#popup-edit-contact .modal-footer .btn-secondary");
     public static SelenideElement MODAL_EDIT_ICON_CROSS = $("#popup-edit-contact .close");
 
