@@ -3,14 +3,11 @@ package ru.ql.tt;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.refresh;
+import static com.codeborne.selenide.Condition.appear;
+import static com.codeborne.selenide.Condition.disappear;
 import static com.codeborne.selenide.WebDriverRunner.url;
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 import static ru.ql.tt.Base.CssLocators.*;
-import static ru.ql.tt.Base.ProfileBase.closeModalWindow;
 import static ru.ql.tt.Base.ProfileBase.openModalWindow;
 
 public class ProfilePageTests extends TestBase {
@@ -18,7 +15,6 @@ public class ProfilePageTests extends TestBase {
     //Проверка перехода на страницу профиля
     @Test
     public void testMoveProfilePage() {
-        //profileBase.GoToProfilePage();
         Assert.assertEquals("Профиль", TITLE_PROFILE.getText());
         Assert.assertEquals(url(), properties.getProperty("ProfilePage"));
     }
@@ -26,7 +22,6 @@ public class ProfilePageTests extends TestBase {
     //Проверка верстки (цвета кнопки "Сформировать резюме" и положения лого )
     @Test
     public void testProfilePage() {
-        //profileBase.GoToProfilePage();
         assertTrue(profileBase.checkButtonCreateResume());
         assertEquals(BUTTON_CREATE_RESUME.getText(),"Сформировать резюме");
         assertTrue(profileBase.UserPhotoAboveResume());
@@ -35,7 +30,6 @@ public class ProfilePageTests extends TestBase {
     //Проверка блока резюме
     @Test
     public void testProfileVisibleBlockResume() {
-        //profileBase.GoToProfilePage();
         profileBase.allElementInBlock(BLOCK_RESUME, BLOCK_RESUME_TITLE, BLOCK_RESUME_BUTTON, BLOCK_RESUME_FAVICON_PLACE,
                 BLOCK_RESUME_FAVICON_SHORT, BLOCK_RESUME_TEXT_PLACE, BLOCK_RESUME_TEXT_SHORT);
         assertEquals("Резюме", BLOCK_RESUME_TITLE.getText());
@@ -45,7 +39,6 @@ public class ProfilePageTests extends TestBase {
     //Проверка блока График работы
     @Test
     public void testProfileVisibleBlockScheduleWork() {
-        //profileBase.GoToProfilePage();
         profileBase.allElementInBlock(SCHEDULE_WORK_BLOCK, SCHEDULE_WORK_BLOCK_TITLE, SCHEDULE_WORK_BUTTON_EDIT,
                 SCHEDULE_WORK_TABLE, SCHEDULE_WORK_TABLE);
         assertEquals("График работы", SCHEDULE_WORK_BLOCK_TITLE.getText());
@@ -55,7 +48,6 @@ public class ProfilePageTests extends TestBase {
     //Проверка блока Контакты
     @Test
     public void testProfileVisibleBlockContacts() {
-        //profileBase.GoToProfilePage();
         profileBase.allElementInBlock(CONTACTS_BLOCK, CONTACTS_BLOCK_TITLE, CONTACTS_BLOCK_BUTTON_EDIT);
         profileBase.getTextOfSelectOptions(CONTACTS_BLOCK_ICONS);
         profileBase.getTextOfSelectOptions(CONTACTS_BLOCK_TEXT);
@@ -66,7 +58,6 @@ public class ProfilePageTests extends TestBase {
     //Проверка блока Окружение
     @Test
     public void testProfileVisibleBlockDevices() {
-        //profileBase.GoToProfilePage();
         profileBase.allElementInBlock(BLOCK_DEVICES, BLOCK_DEVICES_TITLE, BLOCK_DEVICES_BUTTON_ADD);
         profileBase.getTextOfSelectOptions(BLOCK_DEVICES_TABLE);
         assertEquals("Окружения", BLOCK_DEVICES_TITLE.getText());
@@ -74,50 +65,162 @@ public class ProfilePageTests extends TestBase {
     }
 
     //Проверка открытия модального окна Изменение краткого резюме
+    //Проверка сохранения информации
     @Test
     public void testOpenedWindowShortResume() {
-        //profileBase.GoToProfilePage();
         openModalWindow(BLOCK_RESUME_BUTTON, MODAL_WINDOW_EDIT_RESUME);
         assertTrue(MODAL_WINDOW_EDIT_RESUME.isDisplayed());
         assertEquals("Изменение краткого резюме сотрудника", MODAL_WINDOW_EDIT_RESUME_TITLE.getText());
-        closeModalWindow(MODAL_WINDOW_EDIT_RESUME,MODAL_RESUME_EDIT_BUTTON_CLOSE_NOT_SAVE);
-        assertFalse(MODAL_WINDOW_EDIT_RESUME.isDisplayed());
-        refresh();
+        profileBase.enterFieldText(MODAL_WINDOW_EDIT_TEXTAREA, "Test Test Test");
+        MODAL_WINDOW_EDIT_TIP_TEXTAREA.click();
+        assertEquals(MODAL_WINDOW_EDIT_TIP_TEXTAREA.getText(), "Опишите себя в 2-3 предложениях (когда начался и как развивался путь в тестировании, что вы умеете делать круче других, какие ваши сильные стороны, что считаете самым главным в работе).");
+        MODAL_WINDOW_EDIT_BUTTON_SAVE.should(appear).click();
+        profileBase.waitElement(BLOCK_RESUME_TEXT_SHORT);
+        assertEquals(BLOCK_RESUME_TEXT_SHORT.getText(),"Test Test Test");
+    }
+
+    //Проверка того, что информация в модальном окне Изменение краткого резюме сотрудника не сохраняется при закрытии
+    //окна при нажатии кнопки “Закрыть без сохранения”.
+    @Test
+    public void testShortResumeButtonCloseNotSave() {
+        openModalWindow(BLOCK_RESUME_BUTTON, MODAL_WINDOW_EDIT_RESUME);
+        profileBase.enterFieldText(MODAL_WINDOW_EDIT_TEXTAREA, "Закрыть без сохранения");
+        MODAL_RESUME_EDIT_BUTTON_CLOSE_NOT_SAVE.shouldBe(appear).click();
+        assertFalse(BLOCK_RESUME_TEXT_SHORT.getText().equals("Закрыть без сохранения"));
+    }
+
+    //Проверка того, что информация в модальном окне Изменение краткого резюме сотрудника не сохраняется при закрытии
+    //окна при нажатии кнопки “крестик”.
+    @Test
+    public void testShortResumeIconCross() {
+        openModalWindow(BLOCK_RESUME_BUTTON, MODAL_WINDOW_EDIT_RESUME);
+        profileBase.enterFieldText(MODAL_WINDOW_EDIT_TEXTAREA, "Закрыть без сохранения");
+        MODAL_RESUME_EDIT_ICON_CROSS.shouldBe(appear).click();
+        assertFalse(BLOCK_RESUME_TEXT_SHORT.getText().equals("Закрыть без сохранения"));
     }
 
     //Проверка открытия модального окна Изменение графика работ
+    //Проверка сохранения информации
     @Test
     public void testOpenedWindowSchduleWork() {
-        //profileBase.GoToProfilePage();
         openModalWindow(SCHEDULE_WORK_BUTTON_EDIT, MODAL_WINDOW_EDIT_SCHEDULE_WORK);
         assertTrue(MODAL_WINDOW_EDIT_SCHEDULE_WORK.isDisplayed());
         assertEquals("Изменение графика работы", MODAL_WINDOW_EDIT_TITLE_SCHEDULE_WORK.getText());
-        closeModalWindow(MODAL_WINDOW_EDIT_SCHEDULE_WORK,MODAL_SCHEDULE_WORK_BUTTON_CLOSE_NOT_SAVE);
-        assertFalse(MODAL_WINDOW_EDIT_SCHEDULE_WORK.isDisplayed());
-        refresh();
+        profileBase.changeTimeScheduleWork();
+        String beforeStart = MODAL_WINDOW_EDIT_START_TIME_SCHEDULE_WORK.getValue();
+        String beforeEnd = MODAL_WINDOW_EDIT_END_TIME_SCHEDULE_WORK.getValue();
+        String before = beforeStart + " - " + beforeEnd;
+        MODAL_WINDOW_EDIT_BUTTON_SAVE_SCHEDULE_WORK.click();
+        MODAL_WINDOW_EDIT_SCHEDULE_WORK.should(disappear);
+        assertEquals(PROFILE_TABLE_TIME_MONDAY.getText(),before);
+    }
+
+    //Проверка того, что информация в модальном окне Изменение графика работ сотрудника не сохраняется при закрытии
+    //окна при нажатии кнопки “Закрыть без сохранения”.
+    @Test
+    public void testSchedulWorkButtonCloseNotSave() {
+        openModalWindow(SCHEDULE_WORK_BUTTON_EDIT, MODAL_WINDOW_EDIT_SCHEDULE_WORK);
+        profileBase.changeTimeScheduleWork();
+        String beforeStart = MODAL_WINDOW_EDIT_START_TIME_SCHEDULE_WORK.getValue();
+        String beforeEnd = MODAL_WINDOW_EDIT_END_TIME_SCHEDULE_WORK.getValue();
+        String before = beforeStart + " - " + beforeEnd;
+        MODAL_SCHEDULE_WORK_BUTTON_CLOSE_NOT_SAVE.click();
+        assertFalse(PROFILE_TABLE_TIME_MONDAY.getText().equals(before));
+    }
+
+    //Проверка того, что информация в модальном окне Изменение графика работ сотрудника не сохраняется при закрытии
+    //окна при нажатии кнопки “Крестик”.
+    @Test
+    public void testSchedulWorkIconCross() {
+        openModalWindow(SCHEDULE_WORK_BUTTON_EDIT, MODAL_WINDOW_EDIT_SCHEDULE_WORK);
+        profileBase.changeTimeScheduleWork();
+        String beforeStart = MODAL_WINDOW_EDIT_START_TIME_SCHEDULE_WORK.getValue();
+        String beforeEnd = MODAL_WINDOW_EDIT_END_TIME_SCHEDULE_WORK.getValue();
+        String before = beforeStart + " - " + beforeEnd;
+        MODAL_WINDOW_EDIT_ICON_CROSS.click();
+        assertFalse(PROFILE_TABLE_TIME_MONDAY.getText().equals(before));
     }
 
     //Проверка открытия модального окна Изменение контактной информации
+    //Проверка сохранения информации
     @Test
     public void testOpenedWindowContacts() {
-        //profileBase.GoToProfilePage();
         openModalWindow(CONTACTS_BLOCK_BUTTON_EDIT, MODAL_WINDOW_EDIT_CONTACTS);
         assertTrue(MODAL_WINDOW_EDIT_CONTACTS.isDisplayed());
         assertEquals("Изменение контактной информации", TITLE_MODAL_WINDOW_EDIT_CONTACTS.getText());
-        closeModalWindow(MODAL_WINDOW_EDIT_CONTACTS,MODAL_WINDOW_EDIT_CONTACTS_CLOSE_NOT_SAVE);
-        assertFalse(MODAL_WINDOW_EDIT_CONTACTS.isDisplayed());
-        refresh();
+        profileBase.enterFieldText(MODAL_EDIT_PHONE_FIELD.shouldBe(appear), "12345");
+        profileBase.enterFieldText(MODAL_EDIT_SKYPE_FIELD.shouldBe(appear), "MY_SKYPE");
+        MODAL_EDIT_SAVE_BUTTON.click();
+        MODAL_WINDOW_EDIT_CONTACTS.should(disappear);
+        assertEquals(PROFILE_CONTACTS_FIELD_SKYPE.shouldBe(appear).getText(), "MY_SKYPE");
+        assertEquals(PROFILE_CONTACTS_FIELD_PHONE.shouldBe(appear).getText(), "12345");
+    }
+
+    //Проверка того, что информация в модальном окне Изменение контактной информации сотрудника не сохраняется при закрытии
+    //окна при нажатии кнопки “Закрыть без сохранения”.
+    @Test
+    public void testContactsButtonCloseNotSave() {
+        openModalWindow(CONTACTS_BLOCK_BUTTON_EDIT, MODAL_WINDOW_EDIT_CONTACTS);
+        profileBase.enterFieldText(MODAL_EDIT_PHONE_FIELD.shouldBe(appear), "000000");
+        profileBase.enterFieldText(MODAL_EDIT_SKYPE_FIELD.shouldBe(appear), "Test");
+        MODAL_EDIT_BUTTON_CLOSE_NOT_SAVE.click();
+        assertFalse(PROFILE_CONTACTS_FIELD_SKYPE.shouldBe(appear).getText().equals("000000"));
+        assertFalse(PROFILE_CONTACTS_FIELD_SKYPE.shouldBe(appear).getText().equals("Test"));
+    }
+
+    //Проверка того, что информация в модальном окне Изменение контактной информации сотрудника не сохраняется при закрытии
+    //окна при нажатии кнопки “Закрыть без сохранения”.
+    @Test
+    public void testContactsIconCross() {
+        openModalWindow(CONTACTS_BLOCK_BUTTON_EDIT, MODAL_WINDOW_EDIT_CONTACTS);
+        profileBase.enterFieldText(MODAL_EDIT_PHONE_FIELD.shouldBe(appear), "000000");
+        profileBase.enterFieldText(MODAL_EDIT_SKYPE_FIELD.shouldBe(appear), "Test");
+        MODAL_EDIT_ICON_CROSS.click();
+        assertFalse(PROFILE_CONTACTS_FIELD_SKYPE.shouldBe(appear).getText().equals("000000"));
+        assertFalse(PROFILE_CONTACTS_FIELD_SKYPE.shouldBe(appear).getText().equals("Test"));
     }
 
     //Проверка открытия модального окна Добавление нового устройство
+    //Проверка сохранения информации
     @Test
     public void testOpenedWindowAddDevices() {
-        //profileBase.GoToProfilePage();
-        openModalWindow(BLOCK_DEVICES_BUTTON_ADD, MODAL_WINDOW_DEVICE);
-        assertTrue(MODAL_WINDOW_DEVICE.isDisplayed());
-        assertEquals("Добавление нового устройства", MODAL_WINDOW_DEVICE_TITLE.should(visible).getText());
-        closeModalWindow(MODAL_WINDOW_DEVICE,MODAL_WINDOW_DEVICE_BUTTON_CLOSE_NOT_SAVE);
-        assertFalse(MODAL_WINDOW_DEVICE.isDisplayed());
-        refresh();
+        profileBase.addDevice(4, 5, "Test OS");
+        assertEquals("Запись \"Окружение\" успешно создана", profileBase.getPopupWindowText(POPUP_WINDOWS));
+        profileBase.deleteDevice();
     }
+
+    //Проверка того, что информация в модальном окне Добавление нового устройство не сохраняется при закрытии
+    //окна при нажатии кнопки “Закрыть без сохранения”.
+    @Test
+    public void testAddDevicesButtonCloseNotSave() {
+        profileBase.addDevice(4, 5, "Test OS");
+        TABLE_ICON_EDIT.shouldBe(appear).click();
+        profileBase.enterFieldText(EDIT_WINDOW_VERSION_OS, "Test Test Test");
+        EDIT_WINDOW_BUTTON_CLOSE_NOT_SAVE.shouldHave(appear).click();
+        EDIT_WINDOW_BUTTON_CLOSE_NOT_SAVE.shouldHave(appear).click();
+        assertFalse(TABLE_FIELD_OS.getText().equals("Test Test Test"));
+        profileBase.deleteDevice();
+    }
+
+    //Проверка того, что информация в модальном окне Добавление нового устройство не сохраняется при закрытии
+    //окна при нажатии кнопки “Закрыть без сохранения”.
+    @Test
+    public void testAddDevicesIconCross() {
+        profileBase.addDevice(4, 5, "Test OS");
+        TABLE_ICON_EDIT.shouldBe(appear).click();
+        profileBase.enterFieldText(EDIT_WINDOW_VERSION_OS, "Test Test Test");
+        EDIT_WINDOW_ICON_CROSS.shouldBe(appear).click();
+        EDIT_WINDOW_ICON_CROSS.shouldBe(appear).click();
+        assertFalse(TABLE_FIELD_OS.getText().equals("Test Test Test"));
+        profileBase.deleteDevice();
+    }
+
+    //Проверка того, что при нажатии на кнопку “Сформировать резюме” в новой вкладке открывается превью резюме.
+
+
+
+
+
+
+
 }

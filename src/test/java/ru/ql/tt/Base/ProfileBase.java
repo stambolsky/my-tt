@@ -8,9 +8,10 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
-import static com.codeborne.selenide.Condition.appear;
-import static com.codeborne.selenide.Condition.disappear;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.exist;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 import static ru.ql.tt.Base.CssLocators.*;
 import static ru.ql.tt.Base.CssLocators.BLOCK_RESUME;
 
@@ -80,6 +81,51 @@ public class ProfileBase {
         button.waitUntil(appear, 4000).click();
         button.waitUntil(appear, 4000).click();
         window.waitUntil(disappear, 4000);
+    }
+
+    public String getPopupWindowText(SelenideElement element) {
+        return getElementValue(element);
+    }
+
+    public static String getElementValue(SelenideElement element) {
+        return element.should(appear).getText();
+    }
+
+
+    public void waitElement(SelenideElement element) {
+        element.waitUntil(exist, 5000);
+    }
+
+    public void enterFieldText(SelenideElement field, String text) {
+        field.should(appear).clear();
+        field.sendKeys(text);
+    }
+
+    public void changeTimeScheduleWork() {
+        MODAL_WINDOW_EDIT_START_TIME_SCHEDULE_WORK.should(exist).click();
+        MODAL_WINDOW_EDIT_TIME_HOUR_UP.should(exist).click();
+        MODAL_WINDOW_EDIT_TIME_MINUTE_UP.should(exist).click();
+        MODAL_WINDOW_EDIT_END_TIME_SCHEDULE_WORK.should(exist).click();
+        MODAL_WINDOW_EDIT_TIME_HOUR_UP.should(exist).click();
+        MODAL_WINDOW_EDIT_TIME_MINUTE_UP.should(exist).click();
+    }
+
+    public void addDevice(int type, int typeOs, String versionOs) {
+        openModalWindow(BLOCK_DEVICES_BUTTON_ADD, MODAL_WINDOW_DEVICE);
+        assertTrue(MODAL_WINDOW_DEVICE.isDisplayed());
+        assertEquals("Добавление нового устройства", MODAL_WINDOW_DEVICE_TITLE.should(visible).getText());
+        TYPE_PC.selectOption(type);
+        EDIT_WINDOW_OS.selectOption(typeOs);
+        enterFieldText(TYPE_OS, versionOs);
+        BUTTON_DEVICE_SAVE.shouldBe(appear).click();
+    }
+
+    public void deleteDevice() {
+        TABLE_ICON_TRASH.shouldBe(appear).click();
+        EDIT_WINDOW.waitUntil(visible, 3000);
+        assertEquals("Удаление устройства", EDIT_WINDOW_TITLE.getText());
+        BUTTON_DELETE_DEVICE.shouldBe(appear).click();
+        //assertEquals("Устройство удалено", getPopupWindowText(POPUP_WINDOWS));
     }
 
 }
