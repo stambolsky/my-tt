@@ -190,7 +190,7 @@ public class ProfilePageTests extends TestBase {
     @Test
     public void testOpenedWindowAddDevices() {
         profileBase.addDevice(4, 5, "Test OS");
-        assertEquals("Запись \"Окружение\" успешно создана", profileBase.getPopupWindowText(POPUP_WINDOWS)) ;
+        profileBase.checkPopUpWindows();
         profileBase.deleteDevice();
     }
 

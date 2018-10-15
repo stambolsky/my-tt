@@ -141,4 +141,12 @@ public class ProfileBase {
         }
     }
 
+    public void checkPopUpWindows() {
+        if (getPopupWindowText(POPUP_WINDOWS).equals("Запись \"Окружение\" успешно создана")) {
+            assertEquals("Запись \"Окружение\" успешно создана", getPopupWindowText(POPUP_WINDOWS)) ;
+        } else if (getPopupWindowText(POPUP_WINDOWS).equals("Профиль успешно обновлен")) {
+            assertEquals("Профиль успешно обновлен", getPopupWindowText(POPUP_WINDOWS)) ;
+        }
+    }
+
 }
